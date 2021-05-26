@@ -1,0 +1,337 @@
+@import "variables";
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    height: 500px;
+
+    .header-title {
+      padding-top: 182px;
+      font-size: 110px;
+      line-height: 130px;
+      width: 50%;
+    }
+
+    .header-nav {
+      padding: 28px 84px 28px 90px;
+
+      .nav-links {
+        display: block;
+        position: static;
+        height: auto;
+        background-color: transparent;
+        text-align: right;
+
+        .menu {
+          padding-top: 0px;
+          display: inline-block;
+          color: $white-color;
+          .menu-item {
+            margin-bottom: 0px;
+            display: inline-block;
+            .nav-link {
+              color: inherit;
+              margin-right: 50px;
+              padding-bottom: 7px;
+
+              &.active {
+                border-bottom: 1.5px solid $white-color;
+              }
+
+              &:hover {
+                color: $color-for-links-and-buttons;
+                transition: .7s;
+              }
+            }
+          }
+        }
+
+        .menu-get-skout-btn,
+        .menu-login-btn {
+          display: inline-block;
+          margin-top: 0px;
+          border-color: $white-color;
+          color: $white-color;
+
+          &:hover {
+            background-color: $white-color;
+            color: $color-for-links-and-buttons;
+          }
+        }
+
+        .menu-get-skout-btn {
+          margin-right: 20px;
+        }
+      }
+
+      .menu-btn {
+        .menu-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    height: 80px;
+    margin-bottom: 98px;
+    border-top: 5px solid $color-for-links-and-buttons;
+    top: 100px;
+    .navbar-link {
+      padding: 0 13%;
+      line-height: 24px;
+    }
+  }
+
+  .main-section {
+    .section-delimiter {
+      &.margin {
+        margin-top: 160px;
+      }
+    }
+
+    .skout-tips {
+      padding: 0 135px;
+      .skout-tips-img {
+        height: 41px;
+        margin: 20px 0 101px 0;
+      }
+
+      .accordion-wrapper {
+        .accordion-hide {
+          .accordion-img-wrapper {
+            margin: 50px;
+            display: inline-block;
+            width: 270px;
+            height: 270px;
+            .accordion-img {
+              width: 270px;
+              height: 270px;
+            }
+          }
+
+          .accordion-content {
+            width: 464px;
+            display: inline-block;
+            margin-left: 130px;
+
+            .accordion-text {
+              margin-top: 0;
+              font-size: 16px;
+            }
+
+            .accordion-note-block {
+              padding: 60px 0 0 0;
+
+              .accordion-note {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .accordion-btn {
+          height: 148.5px;
+
+          &.active {
+            .accordion-title {
+              font-size: 42px;
+              line-height: 54px;
+              max-width: 359px;
+            }
+          }
+
+          .accordion-title {
+            font-size: 24px;
+            line-height: 36px;
+          }
+
+          .accordion-number {
+            font-size: 110px;
+            line-height: 130px;
+            width: 64px;
+            padding-right: 90px;
+          }
+
+          &::after {
+            content: "+";
+            font-size: 40px;
+            width: 35px;
+            height: 35px;
+          }
+        }
+
+        .active::after {
+          content: "-";
+          font-size: 40px;
+        }
+      }
+    }
+
+    .skout-glossary {
+      .skout-glossary-img-wrapper {
+        padding: 0 135px;
+        .skout-glossary-img {
+          height: 41px;
+          margin: 19.5px 0 50px 0;
+        }
+      }
+
+      .skout-glossary-slider {
+        padding: 60px 0;
+        display: flex;
+
+        .skout-glossary-slider-content {
+          .skout-glossary-slider-item {
+            margin-left: 130px;
+
+            .skout-glossary-slider-item-title {
+              margin: 0 0 73px 0;
+              font-size: 90px;
+              line-height: 120px;
+            }
+
+            .skout-glossary-slider-item-text {
+              margin-left: 70px;
+              padding-left: 36px;
+              max-width: 462.5px;
+              font-size: 24px;
+              line-height: 36px;
+            }
+          }
+        }
+
+        .skout-glossary-slider-menu {
+          width: 420px;
+          margin: 0;
+          height: inherit;
+
+          .skout-glossary-slider-menu-selectors {
+            width: 331px;
+            .skout-glossary-slider-menu-selector {
+              .skout-glossary-slider-menu-line {
+                width: 105px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .skout-faqs {
+      padding: 0 135px;
+
+      .skout-faqs-more-questions-btn {
+        margin: 50px auto 102px auto;
+      }
+
+      .skout-faqs-img {
+        height: 32px;
+        margin: 19.5px 0 100px 0;
+      }
+
+      .skout-faqs-accordion {
+        .skout-faqs-accordion-btn {
+          height: 196px;
+
+          .skout-faqs-q-letter {
+            font-size: 110px;
+            line-height: 130px;
+          }
+
+          .skout-faqs-question {
+            font-size: 24px;
+            line-height: 36px;
+            margin-left: 100px;
+          }
+        }
+
+        .skout-faqs-answer {
+          .skout-faqs-answer-wrapper {
+            .skout-faqs-a-letter {
+              font-size: 110px;
+              line-height: 130px;
+            }
+
+            .skout-faqs-answer-text {
+              margin: 35px 0 0 90px;
+              font-size: 16px;
+              max-width: 670px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-wrapper {
+      .footer-info-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 78px 135px 0 135px;
+
+        .footer-nav-block {
+          padding: 0;
+
+          .links {
+            .link {
+              margin-bottom: 30px;
+            }
+          }
+        }
+
+        .footer-address-block-wrapper {
+          width: 903px;
+
+          .footer-address-block {
+            display: flex;
+            align-items: center;
+            padding: 10px 0 50px 0;
+
+            .footer-address-info {
+              font-size: 24px;
+              width: 320px;
+            }
+
+            .footer-address-street-info {
+              margin-left: 30px;
+              font-size: 16px;
+              max-width: 270px;
+            }
+
+            .footer-address-map-link {
+              display: block;
+              margin: 0 0 0 auto;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .footer-delimiter {
+        margin: 0 0 28px 0;
+      }
+
+      .footer-down-side {
+        padding: 0 135px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-social-block {
+          .icon {
+            margin-right: 53px;
+          }
+        }
+
+        .footer-logo-wrapper {
+          margin: 0;
+          .footer-logo {
+            height: 58px;
+          }
+        }
+      }
+    }
+  }
+}

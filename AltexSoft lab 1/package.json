@@ -1,0 +1,20 @@
+{
+  "name": "altexsoft-lab-1",
+  "version": "1.0.0",
+  "description": "AltexSoft first lab created by Nikita Vyzhol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "altexsoft"
+  ],
+  "author": "Nikita Vyzhol",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.1.0"
+  }
+}

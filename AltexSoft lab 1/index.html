@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AltexSoft Lab 1</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Acme&family=Actor&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-nav" id="navigation">
+          <img src="images/skout-3.png" alt="logo" class="logo" id="logo" />
+          <img
+            src="./images/skout-2.png"
+            alt="logo dark"
+            class="logo-dark"
+            id="logo-dark"
+          />
+          <button class="menu-btn" onclick="openMenu()">
+            <svg class="icon menu-icon" id="menu-icon">
+              <use xlink:href="./images/icons.svg#menu"></use>
+            </svg>
+          </button>
+
+          <div id="nav-links" class="nav-links">
+            <ul class="menu" id="menu">
+              <li class="menu-item">
+                <a href="#" class="nav-link">why skout</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">products</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">partners</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">company</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link active">tips & tools</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">blog</a>
+              </li>
+            </ul>
+            <button class="menu-get-skout-btn" id="get-skout-btn">
+              get skout
+            </button>
+            <button class="menu-login-btn" id="login-btn">log in</button>
+          </div>
+        </div>
+        <h1 class="header-title">TIPS & TOOLS</h1>
+      </header>
+      <div class="navbar">
+        <a href="#tips" class="navbar-link">tips</a>
+        <a href="#glossary" class="navbar-link">glossary</a>
+        <a href="#faqs" class="navbar-link">faqs</a>
+      </div>
+      <main class="main-section">
+        <a name="tips"></a>
+        <div class="section-delimiter"></div>
+        <section class="skout-tips">
+          <img
+            src="images/skout-tips.svg"
+            alt="skout tips"
+            class="skout-tips-img"
+          />
+          <div class="accordion-wrapper">
+            <span class="accordion-delimiter"></span>
+            <button class="accordion-btn">
+              <p class="accordion-number">1</p>
+              <p class="accordion-title">System Patching</p>
+            </button>
+            <div class="accordion-hide">
+              <div class="accordion-img-wrapper">
+                <img
+                  src="./images/accordion-image.png"
+                  alt="accordion-image"
+                  class="accordion-img"
+                />
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-text">
+                  There’s nothing hackers love more than a dismissed update
+                  reminder. We keep our team’s computers in shape and up to date
+                  so that they aren’t subject to attacks that could otherwise be
+                  avoided. Not properly updating your systems makes you an easy
+                  to reach target and hackers will often go after the lowest
+                  hanging fruit. When it comes to maintaining a strong
+                  cybersecurity network the best thing a user can do is to
+                  prevent problems before they occur, and the easiest way to do
+                  that is by making sure that all systems are updated and
+                  updated regularly.
+                </p>
+                <div class="accordion-note-block">
+                  <span class="note-icon">
+                    <p class="note-icon-letter">i</p>
+                  </span>
+                  <p class="accordion-note">
+                    Based on the 2018 Verizon Data Breach Report
+                  </p>
+                </div>
+              </div>
+            </div>
+            <span class="accordion-delimiter"></span>
+            <button class="accordion-btn">
+              <p class="accordion-number">2</p>
+              <p class="accordion-title">End-to-End Protection</p>
+            </button>
+            <div class="accordion-hide">
+              <div class="accordion-img-wrapper">
+                <img
+                  src="./images/accordion-image.png"
+                  alt="accordion-image"
+                  class="accordion-img"
+                />
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-text">
+                  51% of breaches involved malware, we cover your bases. Malware
+                  is classified as software that is designed with the intention
+                  of causing damage to your devices, whether those be phones,
+                  servers, laptops, or any other kind of device in the IoT.
+                  Malware often takes the form of code, innocuous content,
+                  scripts or software. With SKOUT’s End-to-End Protection you
+                  can rest assured that all vulnerable points within your system
+                  are accounted for and safeguarded so that you don’t fall
+                  victim to malware of any kind.
+                </p>
+                <div class="accordion-note-block">
+                  <span class="note-icon">
+                    <p class="note-icon-letter">i</p>
+                  </span>
+                  <p class="accordion-note">
+                    Based on the 2018 Verizon Data Breach Report
+                  </p>
+                </div>
+              </div>
+            </div>
+            <span class="accordion-delimiter"></span>
+            <button class="accordion-btn">
+              <p class="accordion-number">3</p>
+              <p class="accordion-title">Empowering Teams</p>
+            </button>
+            <div class="accordion-hide">
+              <div class="accordion-img-wrapper">
+                <img
+                  src="./images/accordion-image.png"
+                  alt="accordion-image"
+                  class="accordion-img"
+                />
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-text">
+                  With 43% of breaches involving social attacks, cyber security
+                  is a team sport. We get your employees up to speed. Our
+                  maturity model makes sure that every team is able to set
+                  security benchmarks and reach those benchmarks as certain
+                  cybersecurity requirements are met. Requirements could range
+                  from individuals setting up approved firewalls to everyone
+                  within a team taking on a complex password system. Small
+                  changes often make all the difference when trying to avoid a
+                  cybersecurity crisis and will allow you to find trouble before
+                  trouble finds you.
+                </p>
+                <div class="accordion-note-block">
+                  <span class="note-icon">
+                    <p class="note-icon-letter">i</p>
+                  </span>
+                  <p class="accordion-note">
+                    Based on the 2018 Verizon Data Breach Report
+                  </p>
+                </div>
+              </div>
+            </div>
+            <span class="accordion-delimiter"></span>
+            <button class="accordion-btn">
+              <p class="accordion-number">4</p>
+              <p class="accordion-title">Secure Credentials</p>
+            </button>
+            <div class="accordion-hide">
+              <div class="accordion-img-wrapper">
+                <img
+                  src="./images/accordion-image.png"
+                  alt="accordion-image"
+                  class="accordion-img"
+                />
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-text">
+                  81% of attacks involve stolen or weak credentials. The easiest
+                  way to protect yourself from having your credentials stolen is
+                  to make sure that they are not easy to replicate. This means
+                  including multiple characters and figures in your passwords,
+                  and not reusing the same passwords for multiple accounts.
+                  Also, it’s key to never store your passwords in one central
+                  location. Committing passwords to memory is often the best way
+                  to make sure that intruders don’t figure them out. All of
+                  these tips represent easy steps that you can take towards
+                  making your credentials stronger.
+                </p>
+                <div class="accordion-note-block">
+                  <span class="note-icon">
+                    <p class="note-icon-letter">i</p>
+                  </span>
+                  <p class="accordion-note">
+                    Based on the 2018 Verizon Data Breach Report
+                  </p>
+                </div>
+              </div>
+            </div>
+            <span class="accordion-delimiter"></span>
+          </div>
+        </section>
+        <a name="glossary"></a>
+        <div class="section-delimiter margin"></div>
+        <section class="skout-glossary">
+          <div class="skout-glossary-img-wrapper">
+            <img
+              src="./images/skout-glossary.svg"
+              alt="skout-glossary-image"
+              class="skout-glossary-img"
+            />
+          </div>
+          <div class="skout-glossary-slider">
+            <div class="skout-glossary-slider-menu">
+              <div class="skout-glossary-slider-menu-selectors" id="list">
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(1)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(1)">Botnet</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(2)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(2)">Breach</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(3)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(3)">
+                    Cloud
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(4)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(4)">
+                    DDoS
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(5)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(5)">Domain</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(6)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(6)">Endpoint</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(7)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(7)">Exploit</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(8)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(8)">
+                    Firewall
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(9)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(9)">
+                    IP Address
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(10)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(10)">Malware</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(11)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(11)">Penetration Test</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(12)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(12)">Phishing/Spearphishing</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(13)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(13)">
+                    Ransomware
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(14)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(14)">
+                    Session Hijacking
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(15)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(15)">Social Engineering</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(16)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(16)">Software</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(17)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(17)">SOC</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(18)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(18)">
+                    Trojan Horse
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(19)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(19)">
+                    VPN
+                  </p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(20)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(20)">Virus</p>
+                </div>
+                <div class="skout-glossary-slider-menu-selector">
+                  <span
+                    class="skout-glossary-slider-menu-line"
+                    onclick="currentSlide(21)"
+                  ></span>
+                  <p class="skout-glossary-slider-menu-title" onclick="currentSlide(21)">Worm</p>
+                </div>
+              </div>
+              <div class="skout-glossary-buttons" id="list_index">
+                <span
+                  class="skout-glossary-slider-next-btn"><div class="arrow right"></div
+                ></span>
+                <span
+                  class="skout-glossary-slider-prev-btn"><div class="arrow left"></div
+                ></span>
+              </div>
+            </div>
+            <div class="skout-glossary-slider-content">
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Botnet</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                  perferendis vel odit eius minus, maiores debitis nostrum saepe
+                  accusantium ab velit consectetur nesciunt illo optio dolorum
+                  doloremque voluptatum, cupiditate quibusdam.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Breach</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ipsam repudiandae dignissimos vel temporibus in atque harum
+                  minima! Aliquam quas ea illum exercitationem repellat error,
+                  eos, natus ipsam, ducimus ab nulla?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  Cloud
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Repudiandae rem quos vel distinctio obcaecati voluptatibus
+                  itaque, omnis hic. Doloremque reprehenderit nihil dolorum
+                  recusandae id enim praesentium excepturi accusamus iste ullam?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  DDoS
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore consectetur possimus, vero velit voluptatum quaerat
+                  veniam, enim suscipit libero quas voluptates est sed. Ipsum
+                  necessitatibus, laudantium incidunt asperiores a corrupti?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Domain</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eveniet quis corporis explicabo numquam provident error expedita hic vitae, soluta eos accusamus iure nemo nesciunt odit exercitationem cum et est!
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Endpoint</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                  perferendis vel odit eius minus, maiores debitis nostrum saepe
+                  accusantium ab velit consectetur nesciunt illo optio dolorum
+                  doloremque voluptatum, cupiditate quibusdam.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Exploit</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ipsam repudiandae dignissimos vel temporibus in atque harum
+                  minima! Aliquam quas ea illum exercitationem repellat error,
+                  eos, natus ipsam, ducimus ab nulla?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  Firewall
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Repudiandae rem quos vel distinctio obcaecati voluptatibus
+                  itaque, omnis hic. Doloremque reprehenderit nihil dolorum
+                  recusandae id enim praesentium excepturi accusamus iste ullam?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  IP Address
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore consectetur possimus, vero velit voluptatum quaerat
+                  veniam, enim suscipit libero quas voluptates est sed. Ipsum
+                  necessitatibus, laudantium incidunt asperiores a corrupti?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Malware</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Malicious software that blocks access to a system until a
+                  ransom is paid.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Penetration Test</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                  perferendis vel odit eius minus, maiores debitis nostrum saepe
+                  accusantium ab velit consectetur nesciunt illo optio dolorum
+                  doloremque voluptatum, cupiditate quibusdam.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Phishing/<br>Spearphising</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ipsam repudiandae dignissimos vel temporibus in atque harum
+                  minima! Aliquam quas ea illum exercitationem repellat error,
+                  eos, natus ipsam, ducimus ab nulla?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  Ransomware
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Malicious software that blocks access to a system until a
+                  ransom is paid.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  Session Hijacking
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore consectetur possimus, vero velit voluptatum quaerat
+                  veniam, enim suscipit libero quas voluptates est sed. Ipsum
+                  necessitatibus, laudantium incidunt asperiores a corrupti?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Social Engineering</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita veniam, ipsa, iure ullam repudiandae ea consequatur corrupti excepturi sunt porro numquam deleniti sed nobis quasi culpa maiores. Vel, rem?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Software</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                  perferendis vel odit eius minus, maiores debitis nostrum saepe
+                  accusantium ab velit consectetur nesciunt illo optio dolorum
+                  doloremque voluptatum, cupiditate quibusdam.
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">SOC</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ipsam repudiandae dignissimos vel temporibus in atque harum
+                  minima! Aliquam quas ea illum exercitationem repellat error,
+                  eos, natus ipsam, ducimus ab nulla?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  Trojan Horse
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Repudiandae rem quos vel distinctio obcaecati voluptatibus
+                  itaque, omnis hic. Doloremque reprehenderit nihil dolorum
+                  recusandae id enim praesentium excepturi accusamus iste ullam?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">
+                  VPN
+                </h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore consectetur possimus, vero velit voluptatum quaerat
+                  veniam, enim suscipit libero quas voluptates est sed. Ipsum
+                  necessitatibus, laudantium incidunt asperiores a corrupti?
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Virus</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Code that is masked so that a human or computer unintentionally allows it to replicate itself to spread for the purpose of compromising, corrupting, or destroying a system. 
+                </p>
+              </div>
+              <div class="skout-glossary-slider-item">
+                <h1 class="skout-glossary-slider-item-title">Worm</h1>
+                <p class="skout-glossary-slider-item-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aspernatur animi minus. Mollitia quas id quia harum cupiditate dolorem nisi vitae ut eos ab, beatae aut quibusdam pariatur aliquam nesciunt!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <a name="faqs"></a>
+        <div class="section-delimiter margin"></div>
+        <section class="skout-faqs">
+          <img
+            src="./images/skout-faqs.svg"
+            alt="skout faqs image"
+            class="skout-faqs-img"
+          />
+          <div class="skout-faqs-accordion">
+            <button class="accordion-btn skout-faqs-accordion-btn">
+              <p class="skout-faqs-q-letter">Q</p>
+              <p class="skout-faqs-question">
+                What are your system requirements?
+              </p>
+            </button>
+            <div class="skout-faqs-answer">
+              <div class="skout-faqs-answer-wrapper">
+                <p class="skout-faqs-a-letter">A</p>
+                <p class="skout-faqs-answer-text">
+                  Everyone needs cybersecurity. Some information requires more
+                  protection than other information, but our solution is
+                  adaptable to every business.
+                </p>
+              </div>
+            </div>
+            <button class="accordion-btn skout-faqs-accordion-btn">
+              <p class="skout-faqs-q-letter">Q</p>
+              <p class="skout-faqs-question">
+                Is SKOUT windows and Mac compatible?
+              </p>
+            </button>
+            <div class="skout-faqs-answer">
+              <div class="skout-faqs-answer-wrapper">
+                <p class="skout-faqs-a-letter">A</p>
+                <p class="skout-faqs-answer-text">
+                  SKOUT will work on Windows, Mac, and Linux environments.
+                </p>
+              </div>
+            </div>
+            <button class="accordion-btn skout-faqs-accordion-btn">
+              <p class="skout-faqs-q-letter">Q</p>
+              <p class="skout-faqs-question">
+                Do I need an MSP or Technology provider to get SKOUT?
+              </p>
+            </button>
+            <div class="skout-faqs-answer">
+              <div class="skout-faqs-answer-wrapper">
+                <p class="skout-faqs-a-letter">A</p>
+                <p class="skout-faqs-answer-text">
+                  SKOUT can work directly with your existing IT staff and
+                  security team, regardless if they are an MSP.
+                </p>
+              </div>
+            </div>
+            <button class="accordion-btn skout-faqs-accordion-btn">
+              <p class="skout-faqs-q-letter">Q</p>
+              <p class="skout-faqs-question">Is there a trial program?</p>
+            </button>
+            <div class="skout-faqs-answer">
+              <div class="skout-faqs-answer-wrapper">
+                <p class="skout-faqs-a-letter">A</p>
+                <p class="skout-faqs-answer-text">
+                  If you are interested in trying our platform but aren’t ready
+                  to buy, please reach out to us and we can try to work
+                  something out. SKOUT issues trial programs on a case by case
+                  basis.
+                </p>
+              </div>
+            </div>
+            <button class="accordion-btn skout-faqs-accordion-btn">
+              <p class="skout-faqs-q-letter">Q</p>
+              <p class="skout-faqs-question">Can I get a Demo?</p>
+            </button>
+            <div class="skout-faqs-answer">
+              <div class="skout-faqs-answer-wrapper">
+                <p class="skout-faqs-a-letter">A</p>
+                <p class="skout-faqs-answer-text">
+                  We are happy to schedule a demo with you. Please reach out to
+                  us to get started.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="skout-faqs-more-questions-btn">More Questions</button>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-info-block">
+            <div class="footer-nav-block">
+              <div class="links">
+                <a href="#" class="link">blog</a>
+                <a href="#" class="link">company</a>
+                <a href="#" class="link">terms & conditions</a>
+                <a href="#" class="link">privacy policy</a>
+                <a href="#" class="link">careers</a>
+              </div>
+              <p class="call-the-soc">call the soc</p>
+              <p class="phone-number">1-855-838-4500</p>
+            </div>
+            <div class="footer-address-block-wrapper">
+              <div class="footer-address-block">
+                <p class="footer-address-info">New York</p>
+                <p class="phone-number">+1 631-203-6600</p>
+                <p class="footer-address-street-info">
+                  423 W 55th St. 7th Floor<br />
+                  New York, NY, 10019
+                </p>
+                <a href="" class="footer-address-map-link">View Map</a>
+              </div>
+              <div class="footer-address-block">
+                <p class="footer-address-info">Corporate Headquarters</p>
+                <p class="phone-number">+1 631-203-6600</p>
+                <p class="footer-address-street-info">
+                  270 S. Service Road, Suite 55<br />
+                  Melville, NY, 11747
+                </p>
+                <a href="" class="footer-address-map-link">View Map</a>
+              </div>
+              <div class="footer-address-block">
+                <p class="footer-address-info">EMEA</p>
+                <p class="phone-number">+353-1-6600800</p>
+                <p class="footer-address-street-info">
+                  IDA Business and Technology<br />
+                  Park, Mountrath Road, Unit 2<br />
+                  Portlaoise, Ireland
+                </p>
+                <a href="" class="footer-address-map-link">View Map</a>
+              </div>
+            </div>
+          </div>
+          <span class="footer-delimiter"></span>
+          <div class="footer-down-side">
+            <div class="footer-social-block">
+              <a href="#">
+                <svg class="icon twitter">
+                  <use xlink:href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="icon facebook">
+                  <use xlink:href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="icon youtube">
+                  <use xlink:href="./images/icons.svg#youtube"></use>
+                </svg>
+              </a>
+              <a href="">
+                <svg class="icon linkedin">
+                  <use xlink:href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-logo-wrapper">
+              <img
+                src="./images/skout-1.png"
+                alt="skout cybersecurity"
+                class="footer-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/paginator.js"></script>
+  </body>
+</html>

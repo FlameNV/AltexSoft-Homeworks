@@ -1,0 +1,726 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 210px;
+  background: linear-gradient(45deg, #12c1e3 30%, #00f86b);
+
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: inherit;
+    z-index: 90;
+
+    .logo {
+      height: 24px;
+    }
+
+    .logo-dark {
+      height: 24px;
+      display: none;
+    }
+
+    .menu-btn {
+      background: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      z-index: 99;
+
+      .menu-icon {
+        width: 24px;
+        height: 24px;
+        fill: $white-color;
+      }
+    }
+
+    .nav-links {
+      display: none;
+      position: fixed;
+      z-index: 98;
+      width: 100%;
+      height: 100vh;
+      background-color: $white-color;
+      top: 61px;
+      left: 0;
+
+      .menu {
+        padding-top: 40px;
+        text-align: center;
+        list-style: none;
+        color: $color-for-links-and-buttons;
+
+        .menu-item {
+          margin-bottom: 16px;
+
+          .nav-link {
+            text-decoration: none;
+            font-family: "Acme", sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: inherit;
+
+            &.active {
+              border-bottom: 2px solid $color-for-links-and-buttons;
+          }
+          }
+        }
+      }
+
+      .menu-get-skout-btn,
+      .menu-login-btn {
+        height: 40px;
+        background-color: transparent;
+        border: 1.5px solid $color-for-links-and-buttons;
+        border-radius: 20px;
+        font-family: "Acme", sans-serif;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-for-links-and-buttons;
+        margin: 0 auto;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-for-links-and-buttons;
+          color: $white-color;
+          transition: 0.7s;
+        }
+      }
+
+      .menu-get-skout-btn {
+        display: block;
+        width: 180px;
+        margin-top: 205px;
+      }
+
+      .menu-login-btn {
+        display: block;
+        width: 90px;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .header-title {
+    display: block;
+    font-family: "Actor", sans-serif;
+    color: $white-color;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 68px;
+    margin: 0 auto;
+    width: 38%;
+  }
+}
+
+.navbar {
+  height: 40px;
+  position: sticky;
+  top: 70px;
+  z-index: 20;
+  background: $white-color;
+  box-shadow: 0px 12px 24px #f2f2f2;
+  border-radius: 5px;
+  max-width: 770px;
+  width: 89.4%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2.5px solid $color-for-links-and-buttons;
+  margin-bottom: 24px;
+
+  .navbar-link {
+    font-family: "Acme", sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $main-gray-color;
+    text-decoration: none;
+    display: inline-block;
+    height: 20px;
+    padding: 0 10%;
+
+    &:nth-child(2) {
+      border-right: 0.5px solid $secondary-gray-color;
+      border-left: 0.5px solid $secondary-gray-color;
+    }
+
+    &:hover {
+      color: $color-for-links-and-buttons;
+      transition: 0.7s;
+    }
+  }
+}
+
+.main-section {
+  min-width: 335px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .section-delimiter {
+    height: 1px;
+    width: 89.4%;
+    background-color: $delimiter-color;
+    margin: 0 auto;
+
+    &.margin {
+      margin-top: 24px;
+    }
+  }
+
+  .skout-tips {
+    padding: 0 20px;
+    margin: 0 auto;
+    .skout-tips-img {
+      height: 18px;
+      margin: 10px 0 24px 0;
+    }
+
+    .accordion-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .accordion-btn {
+        height: 53px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: $white-color;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &.active {
+          .accordion-number {
+            display: none;
+          }
+
+          .accordion-title {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+
+        .accordion-title {
+          font-size: 16px;
+          line-height: 24px;
+          font-family: "Aclonica", sans-serif;
+        }
+
+        .accordion-number {
+          display: inline-block;
+          font-size: 40px;
+          line-height: 48px;
+          font-family: "Actor", sans-serif;
+          color: $secondary-gray-color;
+          margin-left: 14px;
+          width: 23px;
+          padding-right: 35px;
+        }
+
+        &::after {
+          content: "+";
+          font-size: 16px;
+          color: $color-for-links-and-buttons;
+          width: 14px;
+          height: 14px;
+          border: 1.5px solid $color-for-links-and-buttons;
+          border-radius: 50%;
+          box-shadow: 0px 3px 6px rgba(127, 127, 127, 0.3);
+          margin-left: auto;
+        }
+      }
+
+      .active::after {
+        content: "-";
+        font-size: 16px;
+      }
+
+      .accordion-hide {
+        margin-top: 22px;
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+
+        .accordion-img-wrapper {
+          width: 117px;
+          height: 117px;
+          margin: 0 auto;
+
+          .accordion-img {
+            width: 117px;
+            height: 117px;
+          }
+        }
+
+        .accordion-content {
+          .accordion-text {
+            font-family: "Aclonica", sans-serif;
+            margin-top: 22px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+
+          .accordion-note-block {
+            display: flex;
+            justify-content: space-between;
+            padding: 11px 0 24px 0;
+
+            .note-icon {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 1px solid $delimiter-color;
+
+              .note-icon-letter {
+                color: $delimiter-color;
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+              }
+            }
+
+            .accordion-note {
+              font-size: 12px;
+              font-family: "Aclonica", sans-serif;
+              color: $main-gray-color;
+              line-height: 24px;
+              position: relative;
+              left: 20px;
+            }
+          }
+        }
+      }
+
+      .accordion-delimiter {
+        display: inline-block;
+        width: 100%;
+        height: 0.3px;
+        background-color: $color-for-links-and-buttons;
+        margin: 1px 0;
+      }
+    }
+  }
+
+  .skout-glossary {
+    .skout-glossary-img-wrapper {
+      padding: 0 20px;
+      margin: 0 auto;
+      .skout-glossary-img {
+        height: 18px;
+        margin: 12px 0 24px 0;
+      }
+    }
+
+    .skout-glossary-slider {
+      padding-top: 24px;
+      background: linear-gradient(
+        25deg,
+        rgba(255, 0, 0, 0.1) 10%,
+        rgba(0, 0, 255, 0.1) 40%,
+        rgba(255, 255, 255, 0.1) 80%
+      );
+
+      .skout-glossary-slider-content {
+        width: 89.4%;
+        margin: 0 auto;
+        background: transparent;
+        padding-top: 32px;
+
+        .skout-glossary-slider-item {
+          padding-bottom: 24px;
+          .skout-glossary-slider-item-title {
+            font-family: "Actor", sans-serif;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 1.5px;
+            font-weight: normal;
+            margin: 0 0 24px 16px;
+            text-transform: uppercase;
+          }
+
+          .skout-glossary-slider-item-text {
+            font-family: "Aclonica", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            padding-left: 16px;
+            border-left: 2px solid $color-for-links-and-buttons;
+          }
+        }
+      }
+
+      .skout-glossary-slider-menu {
+        width: 89.4%;
+        margin: 0 auto;
+        background-color: $white-color;
+        height: 240px;
+        border-radius: 5px;
+        box-shadow: 0px 12px 24px #e5e5e5;
+        display: flex;
+        justify-content: space-between;
+
+        .skout-glossary-buttons {
+          display: flex;
+          flex-direction: column;
+          margin: 32px;
+        }
+
+        .skout-glossary-slider-prev-btn,
+        .skout-glossary-slider-next-btn {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border: 1px solid $color-for-links-and-buttons;
+          border-radius: 50%;
+          cursor: pointer;
+          margin-bottom: 16px;
+
+          &:hover {
+            background-color: $secondary-gray-color;
+            transition: 0.7s;
+          }
+
+          .arrow {
+            border: solid $color-for-links-and-buttons;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            margin: 0 0 4px 3px;
+          }
+
+          .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+
+          .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+          }
+        }
+
+        .skout-glossary-slider-menu-selectors {
+          padding-top: 39px;
+          .skout-glossary-slider-menu-selector {
+            display: flex;
+            align-items: center;
+
+            .skout-glossary-slider-menu-line {
+              display: inline-block;
+              width: 46px;
+              height: 2px;
+              background-color: $color-for-links-and-buttons;
+              opacity: 0;
+              margin: 0 8px;
+            }
+
+            .skout-glossary-slider-menu-title {
+              font-size: 16px;
+              font-family: "Aclonica", sans-serif;
+              line-height: 32px;
+              color: $main-gray-color;
+              cursor: pointer;
+
+              &:hover {
+                color: $color-for-links-and-buttons;
+                transition: 0.7s;
+              }
+            }
+
+            .active {
+              opacity: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .skout-faqs {
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .skout-faqs-img {
+      height: 18px;
+      margin: 11px 0 24px 0;
+    }
+
+    .skout-faqs-accordion {
+      .skout-faqs-accordion-btn {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: $white-color;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 114px;
+
+        &::after {
+          content: "";
+          border: solid $color-for-links-and-buttons;
+          border-width: 0 2px 2px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          margin-left: auto;
+        }
+
+        &:first-child {
+          margin-top: 0px;
+        }
+
+        .skout-faqs-q-letter {
+          font-family: "Actor", sans-serif;
+          font-size: 40px;
+          line-height: 48px;
+          color: $secondary-gray-color;
+        }
+
+        .skout-faqs-question {
+          font-family: "Aclonica", sans-serif;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: start;
+          margin-left: 35px;
+        }
+      }
+
+      .active::after {
+        content: "";
+        border: solid $color-for-links-and-buttons;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+      }
+
+      .skout-faqs-answer {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        padding-top: 17px;
+
+        .skout-faqs-answer-wrapper {
+          display: flex;
+
+          .skout-faqs-a-letter {
+            display: inline-block;
+            font-family: "Actor", sans-serif;
+            font-size: 40px;
+            line-height: 48px;
+            color: $secondary-gray-color;
+          }
+
+          .skout-faqs-answer-text {
+            font-family: "Aclonica", sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+
+    .skout-faqs-more-questions-btn {
+      display: block;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: $white-color;
+      font-family: "Acme", sans-serif;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $color-for-links-and-buttons;
+      margin: 20px auto 24px auto;
+
+      &:hover {
+        color: $main-gray-color;
+        transition: 0.7s;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #f2f2f2;
+
+  .footer-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    .phone-number {
+      font-family: "Aclonica", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: $main-gray-color;
+    }
+
+    .footer-info-block {
+      .footer-nav-block {
+        padding: 24px 0 20px 23px;
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          .link {
+            font-family: "Acme", sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $main-gray-color;
+            text-decoration: none;
+            margin-bottom: 12px;
+
+            &:hover {
+              color: $color-for-links-and-buttons;
+              transition: 0.7s;
+            }
+          }
+        }
+
+        .call-the-soc {
+          font-family: "Acme", sans-serif;
+          font-size: 12px;
+          line-height: 24px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $main-gray-color;
+        }
+      }
+
+      .footer-address-block-wrapper {
+        .footer-address-block {
+          border-top: 2px solid $color-for-links-and-buttons;
+          padding: 8px 0 8px 23px;
+          .footer-address-info {
+            font-family: "Aclonica", sans-serif;
+            font-size: 16px;
+            line-height: 36px;
+            color: $main-gray-color;
+          }
+
+          .footer-address-street-info {
+            font-family: "Aclonica", sans-serif;
+            font-size: 12px;
+            line-height: 20px;
+            color: $main-gray-color;
+          }
+
+          .footer-address-map-link {
+            display: inline-block;
+            font-family: "Aclonica", sans-serif;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color-for-links-and-buttons;
+            text-decoration: none;
+            margin-top: 6px;
+
+            &:hover {
+              color: $main-gray-color;
+              transition: 0.7s;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-delimiter {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $delimiter-color;
+      margin: 12px 0 40px 0;
+    }
+
+    .footer-down-side {
+      .footer-social-block {
+        display: flex;
+        justify-content: space-around;
+
+        & a {
+          text-decoration: none;
+        }
+
+        .icon {
+          fill: $main-gray-color;
+
+          &:hover {
+            transition: 0.7s;
+          }
+        }
+
+        .facebook,
+        .linkedin {
+          width: 25px;
+          height: 25px;
+        }
+
+        .facebook:hover {
+          fill: #4267b2;
+        }
+
+        .linkedin:hover {
+          fill: #0275b4;
+        }
+
+        .twitter {
+          width: 31.5px;
+          height: 25px;
+
+          &:hover {
+            fill: #41abe1;
+          }
+        }
+
+        .youtube {
+          width: 36.25px;
+          height: 25px;
+
+          &:hover {
+            fill: #ff0000;
+          }
+        }
+      }
+
+      .footer-logo-wrapper {
+        margin-top: 20px;
+        text-align: center;
+        .footer-logo {
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+
+@import "media-query";
