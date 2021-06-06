@@ -1,45 +1,70 @@
 @import "variables";
+@import "mixins";
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: $size-desktop-width) {
   .header {
-    height: 500px;
-
     .header-title {
-      padding-top: 182px;
-      font-size: 110px;
-      line-height: 130px;
+      @include letters-xxl;
+
       width: 50%;
+      padding: 185px 0;
+      text-transform: uppercase;
     }
 
     .header-nav {
       padding: 28px 84px 28px 90px;
 
+      .logo {
+        width: $size-logo-desktop;
+      }
+
+      .logo-dark {
+        width: $size-logo-desktop;
+      }
+
       .nav-links {
-        display: block;
         position: static;
+        display: block;
         height: auto;
         background-color: transparent;
         text-align: right;
 
         .menu {
-          padding-top: 0px;
           display: inline-block;
-          color: $white-color;
+          padding-top: 0px;
+          color: $color-white;
+
+          &.is-scroll {
+            color: $color-primary-dark;
+
+            .menu-item {
+              .nav-link.active {
+                border-bottom: 1.5px solid $color-primary-dark;
+              }
+
+              .nav-link:hover {
+                border-bottom: 1.5px solid $color-primary-dark;
+                transition: 0.7s;
+              }
+            }
+          }
+
           .menu-item {
-            margin-bottom: 0px;
             display: inline-block;
+            margin-bottom: 0px;
+
             .nav-link {
-              color: inherit;
               margin-right: 50px;
               padding-bottom: 7px;
+              color: inherit;
 
               &.active {
-                border-bottom: 1.5px solid $white-color;
+                border-bottom: 1.5px solid $color-white;
               }
 
               &:hover {
-                color: $color-for-links-and-buttons;
-                transition: .7s;
+                border-bottom: 1.5px solid $color-white;
+                transition: 0.7s;
               }
             }
           }
@@ -49,12 +74,17 @@
         .menu-login-btn {
           display: inline-block;
           margin-top: 0px;
-          border-color: $white-color;
-          color: $white-color;
+          border-color: $color-white;
+          color: $color-white;
 
           &:hover {
-            background-color: $white-color;
-            color: $color-for-links-and-buttons;
+            background-color: $color-white;
+            color: $color-clicable-el;
+          }
+
+          &.is-scroll {
+            color: $color-primary-dark;
+            border-color: $color-primary-dark;
           }
         }
 
@@ -72,10 +102,11 @@
   }
 
   .navbar {
-    height: 80px;
     margin-bottom: 98px;
-    border-top: 5px solid $color-for-links-and-buttons;
+    border-top: 5px solid $color-clicable-el;
     top: 100px;
+    padding: 30px 0;
+
     .navbar-link {
       padding: 0 13%;
       line-height: 24px;
@@ -91,38 +122,45 @@
 
     .skout-tips {
       padding: 0 135px;
+
       .skout-tips-img {
-        height: 41px;
-        margin: 20px 0 101px 0;
+        width: 247px;
+        margin: 20px 0 100px 0;
       }
 
       .accordion-wrapper {
         .accordion-hide {
+          margin: 0;
+
           .accordion-img-wrapper {
-            margin: 50px;
             display: inline-block;
-            width: 270px;
-            height: 270px;
+            width: $size-accordion-image-desktop;
+            height: $size-accordion-image-desktop;
+            margin: 50px;
+
             .accordion-img {
-              width: 270px;
-              height: 270px;
+              width: $size-accordion-image-desktop;
+              height: $size-accordion-image-desktop;
             }
           }
 
           .accordion-content {
-            width: 464px;
             display: inline-block;
+            width: 464px;
             margin-left: 130px;
+            vertical-align: top;
 
             .accordion-text {
+              @include letters-m;
+
               margin-top: 0;
-              font-size: 16px;
             }
 
             .accordion-note-block {
               padding: 60px 0 0 0;
 
               .accordion-note {
+                max-width: 400px;
                 font-size: 13px;
               }
             }
@@ -130,39 +168,37 @@
         }
 
         .accordion-btn {
-          height: 148.5px;
+          @include letters-l;
 
           &.active {
-            .accordion-title {
-              font-size: 42px;
-              line-height: 54px;
-              max-width: 359px;
-            }
+            font-size: 42px;
+            line-height: 54px;
+            text-align: start;
           }
 
           .accordion-title {
-            font-size: 24px;
-            line-height: 36px;
+            max-width: 1000px;
           }
 
           .accordion-number {
-            font-size: 110px;
-            line-height: 130px;
+            @include letters-xxl;
+
             width: 64px;
             padding-right: 90px;
           }
 
-          &::after {
-            content: "+";
-            font-size: 40px;
-            width: 35px;
-            height: 35px;
-          }
-        }
+          .accordion-dot {
+            width: $size-accordion-button-desktop;
+            height: $size-accordion-button-desktop;
 
-        .active::after {
-          content: "-";
-          font-size: 40px;
+            &::before,
+            &::after {
+              width: 18px;
+              height: 2px;
+              top: 15px;
+              right: 6px;
+            }
+          }
         }
       }
     }
@@ -170,46 +206,60 @@
     .skout-glossary {
       .skout-glossary-img-wrapper {
         padding: 0 135px;
+
         .skout-glossary-img {
-          height: 41px;
-          margin: 19.5px 0 50px 0;
+          width: 342px;
+          margin: 20px 0 50px 0;
         }
       }
+      .skout-glossary-slider-wrapper {
+        .skout-glossary-slider {
+          display: flex;
+          padding: 60px 0;
 
-      .skout-glossary-slider {
-        padding: 60px 0;
-        display: flex;
+          .skout-glossary-slider-content {
+            max-width: 770px;
 
-        .skout-glossary-slider-content {
-          .skout-glossary-slider-item {
-            margin-left: 130px;
+            .skout-glossary-slider-item {
+              margin-left: 130px;
 
-            .skout-glossary-slider-item-title {
-              margin: 0 0 73px 0;
-              font-size: 90px;
-              line-height: 120px;
-            }
+              .skout-glossary-slider-item-title {
+                margin: 0 0 73px 0;
+                font-size: 90px;
+                line-height: 120px;
+              }
 
-            .skout-glossary-slider-item-text {
-              margin-left: 70px;
-              padding-left: 36px;
-              max-width: 462.5px;
-              font-size: 24px;
-              line-height: 36px;
+              .skout-glossary-slider-item-text {
+                @include letters-l;
+
+                max-width: 462px;
+                margin-left: 70px;
+                padding-left: 36px;
+              }
             }
           }
-        }
 
-        .skout-glossary-slider-menu {
-          width: 420px;
-          margin: 0;
-          height: inherit;
+          .skout-glossary-slider-menu {
+            width: 420px;
+            padding: 60px 0 30px 0;
+            margin: 0;
 
-          .skout-glossary-slider-menu-selectors {
-            width: 331px;
-            .skout-glossary-slider-menu-selector {
-              .skout-glossary-slider-menu-line {
+            .prev,
+            .next {
+              width: 25px;
+              top: 25px;
+            }
+
+            .prev {
+              top: 70px;
+            }
+
+            .skout-glossary-slider-menu-title {
+              padding-left: 150px;
+
+              &.is-active::before {
                 width: 105px;
+                left: 15px;
               }
             }
           }
@@ -218,44 +268,41 @@
     }
 
     .skout-faqs {
-      padding: 0 135px;
+      padding: 0 135px 100px 135px;
 
       .skout-faqs-more-questions-btn {
-        margin: 50px auto 102px auto;
+        margin: 50px auto 0 auto;
       }
 
       .skout-faqs-img {
-        height: 32px;
-        margin: 19.5px 0 100px 0;
+        width: 272px;
+        margin: 20px 0 100px 0;
       }
 
       .skout-faqs-accordion {
         .skout-faqs-accordion-btn {
-          height: 196px;
-
-          .skout-faqs-q-letter {
-            font-size: 110px;
-            line-height: 130px;
+          &::before {
+            @include letters-xxl;
           }
 
           .skout-faqs-question {
-            font-size: 24px;
-            line-height: 36px;
+            @include letters-l;
+
             margin-left: 100px;
           }
         }
 
         .skout-faqs-answer {
           .skout-faqs-answer-wrapper {
-            .skout-faqs-a-letter {
-              font-size: 110px;
-              line-height: 130px;
+            &::before {
+              @include letters-xxl;
             }
 
             .skout-faqs-answer-text {
-              margin: 35px 0 0 90px;
-              font-size: 16px;
+              @include letters-m;
+
               max-width: 670px;
+              margin: 35px 0 0 90px;
             }
           }
         }
@@ -271,6 +318,7 @@
         padding: 78px 135px 0 135px;
 
         .footer-nav-block {
+          max-width: 200px;
           padding: 0;
 
           .links {
@@ -281,43 +329,48 @@
         }
 
         .footer-address-block-wrapper {
-          width: 903px;
+          width: 900px;
 
           .footer-address-block {
             display: flex;
             align-items: center;
             padding: 10px 0 50px 0;
 
-            .footer-address-info {
-              font-size: 24px;
+            .footer-address-title {
+              @include letters-l;
+
               width: 320px;
             }
 
-            .footer-address-street-info {
-              margin-left: 30px;
-              font-size: 16px;
+            .footer-address-info {
               max-width: 270px;
+              margin-left: 30px;
+              font-size: $font-s;
             }
 
-            .footer-address-map-link {
+            .footer-map-link {
+              @include letters-m;
+
               display: block;
               margin: 0 0 0 auto;
-              font-size: 16px;
-              line-height: 24px;
+            }
+
+            .call {
+              margin-left: 20px;
             }
           }
         }
       }
 
       .footer-delimiter {
-        margin: 0 0 28px 0;
+        margin: 0;
       }
 
       .footer-down-side {
-        padding: 0 135px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 30px 135px;
 
         .footer-social-block {
           .icon {
@@ -327,8 +380,9 @@
 
         .footer-logo-wrapper {
           margin: 0;
+
           .footer-logo {
-            height: 58px;
+            width: 170px;
           }
         }
       }

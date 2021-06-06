@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 * {
   box-sizing: border-box;
@@ -7,108 +8,160 @@
 }
 
 .header {
-  height: 210px;
   background: linear-gradient(45deg, #12c1e3 30%, #00f86b);
 
   .header-nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 18px 20px;
-    position: fixed;
+    align-items: center;
     width: 100%;
+    padding: 18px 20px;
     top: 0;
     background-color: inherit;
     z-index: 90;
 
-    .logo {
-      height: 24px;
+    &.is-scroll {
+      background-color: $color-white;
     }
 
-    .logo-dark {
-      height: 24px;
+    .logo {
+      width: $size-logo-mobile;
+    }
+
+    #logo.is-scroll {
       display: none;
     }
 
+    #logo-dark {
+      display: none;
+
+      &.is-scroll {
+        display: block;
+      }
+    }
+
+    .logo-dark {
+      width: $size-logo-mobile;
+    }
+
     .menu-btn {
-      background: transparent;
+      position: relative;
+      width: 24px;
+      height: 18px;
       border: none;
-      display: flex;
-      flex-direction: column;
+      background: transparent;
       z-index: 99;
 
+      &.is-scroll > span {
+        background-color: $color-primary-dark;
+      }
+
+      &.is-clicked {
+        .menu-icon {
+          &:first-child {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -80%);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:last-child {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+          }
+        }
+      }
+
       .menu-icon {
+        position: absolute;
         width: 24px;
-        height: 24px;
-        fill: $white-color;
+        height: 2px;
+        right: 0;
+        background-color: $color-white;
+        transition: .4s;
+
+        &:first-child {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+
+        &:last-child {
+          bottom: 0;
+        }
       }
     }
 
     .nav-links {
-      display: none;
       position: fixed;
-      z-index: 98;
+      display: none;
       width: 100%;
       height: 100vh;
-      background-color: $white-color;
       top: 61px;
       left: 0;
+      background-color: $color-white;
+      z-index: 98;
 
       .menu {
         padding-top: 40px;
         text-align: center;
         list-style: none;
-        color: $color-for-links-and-buttons;
+        color: $color-clicable-el;
 
         .menu-item {
           margin-bottom: 16px;
 
           .nav-link {
+            @include letters-xs;
+
             text-decoration: none;
-            font-family: "Acme", sans-serif;
-            font-size: 12px;
-            line-height: 24px;
+            font-family: $font-family-acme;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: inherit;
 
             &.active {
-              border-bottom: 2px solid $color-for-links-and-buttons;
-          }
+              border-bottom: 2px solid $color-clicable-el;
+            }
           }
         }
       }
 
       .menu-get-skout-btn,
       .menu-login-btn {
-        height: 40px;
-        background-color: transparent;
-        border: 1.5px solid $color-for-links-and-buttons;
+        @include letters-xs;
+
+        margin: 0 auto;
+        border: 1.5px solid $color-clicable-el;
         border-radius: 20px;
-        font-family: "Acme", sans-serif;
-        font-size: 12px;
-        line-height: 24px;
+        font-family: $font-family-acme;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: $color-for-links-and-buttons;
-        margin: 0 auto;
+        color: $color-clicable-el;
         cursor: pointer;
+        background-color: transparent;
 
         &:hover {
-          background-color: $color-for-links-and-buttons;
-          color: $white-color;
+          background-color: $color-clicable-el;
+          color: $color-white;
           transition: 0.7s;
         }
       }
 
       .menu-get-skout-btn {
         display: block;
-        width: 180px;
+        padding: 7px 54px;
         margin-top: 205px;
       }
 
       .menu-login-btn {
         display: block;
-        width: 90px;
+        padding: 7px 23px;
         margin-top: 16px;
       }
     }
@@ -116,56 +169,54 @@
 
   .header-title {
     display: block;
-    font-family: "Actor", sans-serif;
-    color: $white-color;
-    font-size: 40px;
+    width: 38%;
+    padding: 68px 0 30px 0;
+    margin: 0 auto;
+    font-family: $font-family-actor;
+    color: $color-white;
+    font-size: $font-l;
     line-height: 56px;
     text-align: center;
     letter-spacing: 2px;
     font-weight: normal;
-    padding-top: 68px;
-    margin: 0 auto;
-    width: 38%;
   }
 }
 
 .navbar {
-  height: 40px;
   position: sticky;
-  top: 70px;
-  z-index: 20;
-  background: $white-color;
-  box-shadow: 0px 12px 24px #f2f2f2;
-  border-radius: 5px;
-  max-width: 770px;
-  width: 89.4%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 2.5px solid $color-for-links-and-buttons;
+  max-width: 770px;
+  width: 89.4%;
+  top: 70px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-top: 2.5px solid $color-clicable-el;
   margin-bottom: 24px;
+  box-shadow: 0px 12px 24px #f2f2f2;
+  border-radius: 5px;
+  z-index: 20;
+  background: $color-white;
 
   .navbar-link {
-    font-family: "Acme", sans-serif;
-    font-size: 12px;
-    line-height: 20px;
+    @include letters-xxs;
+
+    display: inline-block;
+    padding: 0 10%;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: $main-gray-color;
+    color: $color-primary-dark;
     text-decoration: none;
-    display: inline-block;
-    height: 20px;
-    padding: 0 10%;
 
     &:nth-child(2) {
-      border-right: 0.5px solid $secondary-gray-color;
-      border-left: 0.5px solid $secondary-gray-color;
+      border-right: 0.5px solid $color-accordion-item;
+      border-left: 0.5px solid $color-accordion-item;
     }
 
     &:hover {
-      color: $color-for-links-and-buttons;
+      color: $color-clicable-el;
       transition: 0.7s;
     }
   }
@@ -173,14 +224,14 @@
 
 .main-section {
   min-width: 335px;
-  max-width: 1440px;
   margin: 0 auto;
 
   .section-delimiter {
     height: 1px;
     width: 89.4%;
-    background-color: $delimiter-color;
+    max-width: $size-desktop-width;
     margin: 0 auto;
+    background-color: $color-delimiter;
 
     &.margin {
       margin-top: 24px;
@@ -188,10 +239,12 @@
   }
 
   .skout-tips {
+    max-width: $size-desktop-width;
     padding: 0 20px;
     margin: 0 auto;
+
     .skout-tips-img {
-      height: 18px;
+      width: 90px;
       margin: 10px 0 24px 0;
     }
 
@@ -201,115 +254,130 @@
       align-items: flex-start;
 
       .accordion-btn {
-        height: 53px;
+        @include letters-m;
+
+        display: flex;
+        align-items: center;
+        width: 100%;
         border: none;
         outline: none;
         cursor: pointer;
         transition: 0.4s;
-        background-color: $white-color;
-        width: 100%;
-        display: flex;
-        align-items: center;
+        background-color: $color-white;
 
         &.active {
-          .accordion-number {
-            display: none;
-          }
+          padding-top: 24px;
 
           .accordion-title {
-            font-size: 24px;
+            font-size: $font-m;
             line-height: 32px;
+          }
+
+          .accordion-number {
+            display: none;
           }
         }
 
         .accordion-title {
-          font-size: 16px;
-          line-height: 24px;
-          font-family: "Aclonica", sans-serif;
+          max-width: 250px;
+          text-align: start;
         }
 
         .accordion-number {
+          @include letters-xl;
+
           display: inline-block;
-          font-size: 40px;
-          line-height: 48px;
-          font-family: "Actor", sans-serif;
-          color: $secondary-gray-color;
-          margin-left: 14px;
           width: 23px;
+          margin-left: 14px;
           padding-right: 35px;
+          color: $color-accordion-item;
         }
 
-        &::after {
-          content: "+";
-          font-size: 16px;
-          color: $color-for-links-and-buttons;
-          width: 14px;
-          height: 14px;
-          border: 1.5px solid $color-for-links-and-buttons;
+        .accordion-dot {
+          position: relative;
+          width: $size-accordion-button-mobile;
+          height: $size-accordion-button-mobile;
+          right: 0;
+          border: 1.5px solid $color-clicable-el;
           border-radius: 50%;
-          box-shadow: 0px 3px 6px rgba(127, 127, 127, 0.3);
           margin-left: auto;
+          color: $color-clicable-el;
+          box-shadow: 0px 3px 6px rgba(127, 127, 127, 0.3);
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 1px;
+            right: 2px;
+            top: 5px;
+            background-color: $color-clicable-el;
+          }
+
+          &::after {
+            transform: rotate(90deg);
+          }
         }
       }
 
-      .active::after {
-        content: "-";
-        font-size: 16px;
+      .active {
+        .accordion-dot {
+          &::after {
+            display: none;
+          }
+        }
       }
 
       .accordion-hide {
-        margin-top: 22px;
         display: none;
         max-height: 0;
+        margin-top: 22px;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
 
         .accordion-img-wrapper {
-          width: 117px;
-          height: 117px;
+          width: $size-accordion-image-mobile;
+          height: $size-accordion-image-mobile;
           margin: 0 auto;
 
           .accordion-img {
-            width: 117px;
-            height: 117px;
+            width: $size-accordion-image-mobile;
+            height: $size-accordion-image-mobile;
           }
         }
 
         .accordion-content {
           .accordion-text {
-            font-family: "Aclonica", sans-serif;
+            @include letters-s;
+
             margin-top: 22px;
-            font-size: 14px;
-            line-height: 24px;
           }
 
           .accordion-note-block {
             display: flex;
-            justify-content: space-between;
             padding: 11px 0 24px 0;
 
             .note-icon {
               display: inline-block;
-              width: 30px;
-              height: 30px;
+              width: $size-note-icon;
+              height: $size-note-icon;
               border-radius: 50%;
-              border: 1px solid $delimiter-color;
-
-              .note-icon-letter {
-                color: $delimiter-color;
-                text-align: center;
-                line-height: 30px;
-                font-size: 20px;
-              }
+              border: 1px solid $color-delimiter;
+              text-align: center;
+              line-height: 30px;
+              font-size: 20px;
+              color: $color-delimiter;
             }
 
             .accordion-note {
-              font-size: 12px;
-              font-family: "Aclonica", sans-serif;
-              color: $main-gray-color;
-              line-height: 24px;
+              @include letters-xs;
+
               position: relative;
+              max-width: 300px;
               left: 20px;
+              font-family: $font-family-aclonica;
+              color: $color-primary-dark;
             }
           }
         }
@@ -319,24 +387,25 @@
         display: inline-block;
         width: 100%;
         height: 0.3px;
-        background-color: $color-for-links-and-buttons;
         margin: 1px 0;
+        background-color: $color-clicable-el;
       }
     }
   }
 
   .skout-glossary {
     .skout-glossary-img-wrapper {
+      max-width: $size-desktop-width;
       padding: 0 20px;
       margin: 0 auto;
+
       .skout-glossary-img {
-        height: 18px;
+        width: 114px;
         margin: 12px 0 24px 0;
       }
     }
 
-    .skout-glossary-slider {
-      padding-top: 24px;
+    .skout-glossary-slider-wrapper {
       background: linear-gradient(
         25deg,
         rgba(255, 0, 0, 0.1) 10%,
@@ -344,114 +413,93 @@
         rgba(255, 255, 255, 0.1) 80%
       );
 
-      .skout-glossary-slider-content {
-        width: 89.4%;
+      .skout-glossary-slider {
+        max-width: $size-desktop-width;
+        padding-top: 24px;
         margin: 0 auto;
-        background: transparent;
-        padding-top: 32px;
 
-        .skout-glossary-slider-item {
-          padding-bottom: 24px;
-          .skout-glossary-slider-item-title {
-            font-family: "Actor", sans-serif;
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: 1.5px;
-            font-weight: normal;
-            margin: 0 0 24px 16px;
-            text-transform: uppercase;
-          }
+        .skout-glossary-slider-content {
+          width: 89.4%;
+          margin: 0 auto;
+          padding-top: 32px;
+          background: transparent;
 
-          .skout-glossary-slider-item-text {
-            font-family: "Aclonica", sans-serif;
-            font-size: 16px;
-            line-height: 24px;
-            padding-left: 16px;
-            border-left: 2px solid $color-for-links-and-buttons;
-          }
-        }
-      }
+          .skout-glossary-slider-item {
+            padding-bottom: 24px;
 
-      .skout-glossary-slider-menu {
-        width: 89.4%;
-        margin: 0 auto;
-        background-color: $white-color;
-        height: 240px;
-        border-radius: 5px;
-        box-shadow: 0px 12px 24px #e5e5e5;
-        display: flex;
-        justify-content: space-between;
+            .skout-glossary-slider-item-title {
+              margin: 0 0 24px 16px;
+              font-family: $font-family-actor;
+              font-size: 32px;
+              line-height: 40px;
+              letter-spacing: 1.5px;
+              font-weight: normal;
+              text-transform: uppercase;
+            }
 
-        .skout-glossary-buttons {
-          display: flex;
-          flex-direction: column;
-          margin: 32px;
-        }
+            .skout-glossary-slider-item-text {
+              @include letters-m;
 
-        .skout-glossary-slider-prev-btn,
-        .skout-glossary-slider-next-btn {
-          display: inline-block;
-          width: 16px;
-          height: 16px;
-          border: 1px solid $color-for-links-and-buttons;
-          border-radius: 50%;
-          cursor: pointer;
-          margin-bottom: 16px;
-
-          &:hover {
-            background-color: $secondary-gray-color;
-            transition: 0.7s;
-          }
-
-          .arrow {
-            border: solid $color-for-links-and-buttons;
-            border-width: 0 1px 1px 0;
-            display: inline-block;
-            padding: 3px;
-            margin: 0 0 4px 3px;
-          }
-
-          .right {
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-          }
-
-          .left {
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
+              padding-left: 16px;
+              border-left: 2px solid $color-clicable-el;
+            }
           }
         }
 
-        .skout-glossary-slider-menu-selectors {
-          padding-top: 39px;
-          .skout-glossary-slider-menu-selector {
-            display: flex;
-            align-items: center;
+        .skout-glossary-slider-menu {
+          position: relative;
+          width: 89.4%;
+          max-height: 600px;
+          padding: 40px 0;
+          margin: 0 auto;
+          background-color: $color-white;
+          border-radius: 5px;
+          box-shadow: 0px 12px 24px #e5e5e5;
 
-            .skout-glossary-slider-menu-line {
-              display: inline-block;
+          .prev,
+          .next {
+            position: absolute;
+            width: 16px;
+            top: 32px;
+            right: 0;
+            margin-right: 32px;
+            cursor: pointer;
+            z-index: 10;
+          }
+
+          .prev {
+            top: 64px;
+          }
+
+          .skout-glossary-slider-menu-title {
+            width: 80% !important;
+            position: relative;
+            padding-left: 62px;
+            font-size: $font-s;
+            font-family: $font-family-aclonica;
+            line-height: 32px;
+            color: $color-primary-dark;
+            cursor: pointer;
+
+            &:hover {
+              color: $color-clicable-el;
+              transition: 0.7s;
+            }
+
+            &:before {
+              content: "";
+              position: absolute;
+              display: block;
+              top: 15px;
+            }
+
+            &.is-active::before {
+              content: "";
+              position: absolute;
+              left: 8px;
+              height: 1px;
               width: 46px;
-              height: 2px;
-              background-color: $color-for-links-and-buttons;
-              opacity: 0;
-              margin: 0 8px;
-            }
-
-            .skout-glossary-slider-menu-title {
-              font-size: 16px;
-              font-family: "Aclonica", sans-serif;
-              line-height: 32px;
-              color: $main-gray-color;
-              cursor: pointer;
-
-              &:hover {
-                color: $color-for-links-and-buttons;
-                transition: 0.7s;
-              }
-            }
-
-            .active {
-              opacity: 100%;
+              background-color: $color-clicable-el;
             }
           }
         }
@@ -460,62 +508,63 @@
   }
 
   .skout-faqs {
+    max-width: $size-desktop-width;
     padding: 0 20px;
     margin: 0 auto;
 
     .skout-faqs-img {
-      height: 18px;
+      width: 110px;
       margin: 11px 0 24px 0;
     }
 
     .skout-faqs-accordion {
       .skout-faqs-accordion-btn {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 33px 0;
         border: none;
         outline: none;
         cursor: pointer;
         transition: 0.4s;
-        background-color: $white-color;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 114px;
+        background-color: $color-white;
+
+        &::before {
+          @include letters-xl;
+
+          content: "Q";
+          color: $color-accordion-item;
+        }
 
         &::after {
           content: "";
-          border: solid $color-for-links-and-buttons;
-          border-width: 0 2px 2px 0;
           display: inline-block;
+          border: solid $color-clicable-el;
+          border-width: 0 2px 2px 0;
           padding: 3px;
+          margin-left: auto;
           transform: rotate(45deg);
           -webkit-transform: rotate(45deg);
-          margin-left: auto;
         }
 
         &:first-child {
           margin-top: 0px;
         }
 
-        .skout-faqs-q-letter {
-          font-family: "Actor", sans-serif;
-          font-size: 40px;
-          line-height: 48px;
-          color: $secondary-gray-color;
-        }
-
         .skout-faqs-question {
-          font-family: "Aclonica", sans-serif;
-          font-size: 16px;
-          line-height: 24px;
-          text-align: start;
+          @include letters-m;
+
+          max-width: 670px;
           margin-left: 35px;
+          text-align: start;
         }
       }
 
       .active::after {
         content: "";
-        border: solid $color-for-links-and-buttons;
-        border-width: 0 2px 2px 0;
         display: inline-block;
+        border: solid $color-clicable-el;
+        border-width: 0 2px 2px 0;
         padding: 3px;
         transform: rotate(-135deg);
         -webkit-transform: rotate(-135deg);
@@ -524,25 +573,23 @@
       .skout-faqs-answer {
         display: none;
         max-height: 0;
+        padding-top: 17px;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        padding-top: 17px;
 
         .skout-faqs-answer-wrapper {
           display: flex;
 
-          .skout-faqs-a-letter {
-            display: inline-block;
-            font-family: "Actor", sans-serif;
-            font-size: 40px;
-            line-height: 48px;
-            color: $secondary-gray-color;
+          &::before {
+            @include letters-xl;
+
+            content: "A";
+            color: $color-accordion-item;
           }
 
           .skout-faqs-answer-text {
-            font-family: "Aclonica", sans-serif;
-            font-size: 14px;
-            line-height: 24px;
+            @include letters-s;
+
             margin-left: 40px;
           }
         }
@@ -550,21 +597,21 @@
     }
 
     .skout-faqs-more-questions-btn {
+      @include letters-xs;
+
       display: block;
+      margin: 20px auto 24px auto;
       border: none;
-      outline: none;
-      cursor: pointer;
-      background-color: $white-color;
-      font-family: "Acme", sans-serif;
-      font-size: 12px;
-      line-height: 24px;
+      font-family: $font-family-acme;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: $color-for-links-and-buttons;
-      margin: 20px auto 24px auto;
+      color: $color-clicable-el;
+      outline: none;
+      cursor: pointer;
+      background-color: $color-white;
 
       &:hover {
-        color: $main-gray-color;
+        color: $color-primary-dark;
         transition: 0.7s;
       }
     }
@@ -575,13 +622,19 @@
   background-color: #f2f2f2;
 
   .footer-wrapper {
-    max-width: 1440px;
+    max-width: $size-desktop-width;
     margin: 0 auto;
+
     .phone-number {
-      font-family: "Aclonica", sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      color: $main-gray-color;
+      @include letters-m;
+
+      color: $color-primary-dark;
+      text-decoration: none;
+
+      &:hover {
+        transition: 0.7s;
+        color: $color-clicable-el;
+      }
     }
 
     .footer-info-block {
@@ -591,62 +644,64 @@
         .links {
           display: flex;
           flex-direction: column;
+
           .link {
-            font-family: "Acme", sans-serif;
-            font-size: 12px;
-            line-height: 24px;
+            @include letters-xs;
+
+            margin-bottom: 12px;
+            font-family: $font-family-acme;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: $main-gray-color;
+            color: $color-primary-dark;
             text-decoration: none;
-            margin-bottom: 12px;
 
             &:hover {
-              color: $color-for-links-and-buttons;
+              color: $color-clicable-el;
               transition: 0.7s;
             }
           }
         }
 
         .call-the-soc {
-          font-family: "Acme", sans-serif;
-          font-size: 12px;
-          line-height: 24px;
+          @include letters-xs;
+
+          font-family: $font-family-acme;
           letter-spacing: 2px;
           text-transform: uppercase;
-          color: $main-gray-color;
+          color: $color-primary-dark;
         }
       }
 
       .footer-address-block-wrapper {
         .footer-address-block {
-          border-top: 2px solid $color-for-links-and-buttons;
+          border-top: 2px solid $color-clicable-el;
           padding: 8px 0 8px 23px;
-          .footer-address-info {
-            font-family: "Aclonica", sans-serif;
-            font-size: 16px;
+
+          .footer-address-title {
+            font-family: $font-family-aclonica;
+            font-size: $font-s;
             line-height: 36px;
-            color: $main-gray-color;
+            color: $color-primary-dark;
           }
 
-          .footer-address-street-info {
-            font-family: "Aclonica", sans-serif;
-            font-size: 12px;
+          .footer-address-info {
+            font-family: $font-family-aclonica;
+            font-size: $font-xxs;
             line-height: 20px;
-            color: $main-gray-color;
+            color: $color-primary-dark;
           }
 
-          .footer-address-map-link {
+          .footer-map-link {
             display: inline-block;
-            font-family: "Aclonica", sans-serif;
-            font-size: 12px;
-            line-height: 20px;
-            color: $color-for-links-and-buttons;
-            text-decoration: none;
             margin-top: 6px;
+            font-family: $font-family-aclonica;
+            font-size: $font-xxs;
+            line-height: 20px;
+            color: $color-clicable-el;
+            text-decoration: none;
 
             &:hover {
-              color: $main-gray-color;
+              color: $color-primary-dark;
               transition: 0.7s;
             }
           }
@@ -658,8 +713,8 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: $delimiter-color;
       margin: 12px 0 40px 0;
+      background-color: $color-delimiter;
     }
 
     .footer-down-side {
@@ -672,7 +727,7 @@
         }
 
         .icon {
-          fill: $main-gray-color;
+          fill: $color-primary-dark;
 
           &:hover {
             transition: 0.7s;
@@ -715,8 +770,9 @@
       .footer-logo-wrapper {
         margin-top: 20px;
         text-align: center;
+
         .footer-logo {
-          height: 38px;
+          width: 105px;
         }
       }
     }

@@ -1,26 +1,51 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+$(document).ready(function () {
+  $(".slider-single").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    adaptiveHeight: true,
+    infinite: false,
+    useTransform: true,
+    speed: 400,
+  });
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+  $(".slider-nav")
+    .on("init", function (event, slick) {
+      $(".slider-nav .slick-slide.slick-current").addClass("is-active");
+    })
+    .slick({
+      nextArrow: '<img src="./images/arrow-next.svg" class="next" alt="next">',
+      prevArrow: '<img src="./images/arrow-prev.svg" class="prev" alt="prev">',
+      slidesToShow: 15,
+      slidesToScroll: 15,
+      dots: false,
+      vertical: true,
+      focusOnSelect: false,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1439,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 5,
+          },
+        },
+      ],
+    });
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("skout-glossary-slider-item");
-  var dots = document.getElementsByClassName("skout-glossary-slider-menu-line");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+  $(".slider-single").on("afterChange", function (event, slick, currentSlide) {
+    $(".slider-nav").slick("slickGoTo", currentSlide);
+    var currrentNavSlideElem =
+      '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+    $(".slider-nav .slick-slide.is-active").removeClass("is-active");
+    $(currrentNavSlideElem).addClass("is-active");
+  });
+
+  $(".slider-nav").on("click", ".slick-slide", function (event) {
+    event.preventDefault();
+    var goToSingleSlide = $(this).data("slick-index");
+
+    $(".slider-single").slick("slickGoTo", goToSingleSlide);
+  });
+});
