@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 .header {
   background: linear-gradient(45deg, #12c1e3 30%, #00f86b);
 
@@ -107,6 +111,10 @@
       background-color: $color-white;
       z-index: 98;
 
+      &.is-open {
+        display: block;
+      }
+
       .menu {
         padding-top: 40px;
         text-align: center;
@@ -136,7 +144,10 @@
       .menu-login-btn {
         @include letters-xs;
 
-        margin: 0 auto;
+        position: absolute;
+        display: block;
+        bottom: 100px;
+        left: 50%;
         border: 1.5px solid $color-clicable-el;
         border-radius: 20px;
         font-family: $font-family-acme;
@@ -145,6 +156,7 @@
         color: $color-clicable-el;
         cursor: pointer;
         background-color: transparent;
+        transform: translateX(-50%);
 
         &:hover {
           background-color: $color-clicable-el;
@@ -154,23 +166,19 @@
       }
 
       .menu-get-skout-btn {
-        display: block;
         padding: 7px 54px;
-        margin-top: 205px;
+        bottom: 156px;
       }
 
       .menu-login-btn {
-        display: block;
         padding: 7px 23px;
-        margin-top: 16px;
       }
     }
   }
 
   .header-title {
     display: block;
-    width: 38%;
-    padding: 68px 0 30px 0;
+    padding: 68px 115px 30px 115px;
     margin: 0 auto;
     font-family: $font-family-actor;
     color: $color-white;
@@ -187,13 +195,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 770px;
-  width: 89.4%;
+  max-width: 335px;
   top: 70px;
   margin: 0 auto;
   padding: 10px 0;
   border-top: 2.5px solid $color-clicable-el;
-  margin-bottom: 24px;
   box-shadow: 0px 12px 24px #f2f2f2;
   border-radius: 5px;
   z-index: 20;
@@ -228,7 +234,6 @@
 
   .section-delimiter {
     height: 1px;
-    width: 89.4%;
     max-width: $size-desktop-width;
     margin: 0 auto;
     background-color: $color-delimiter;
@@ -240,7 +245,7 @@
 
   .skout-tips {
     max-width: $size-desktop-width;
-    padding: 0 20px;
+    padding: 24px 20px 0 20px;
     margin: 0 auto;
 
     .skout-tips-img {
@@ -262,7 +267,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        transition: 0.4s;
+        transition: 0.7s;
         background-color: $color-white;
 
         &.active {
@@ -619,7 +624,7 @@
 }
 
 .footer {
-  background-color: #f2f2f2;
+  background-color: $color-footer-background;
 
   .footer-wrapper {
     max-width: $size-desktop-width;
@@ -639,7 +644,7 @@
 
     .footer-info-block {
       .footer-nav-block {
-        padding: 24px 0 20px 23px;
+        padding: 24px 20px;
 
         .links {
           display: flex;

@@ -72,10 +72,12 @@
 
         .menu-get-skout-btn,
         .menu-login-btn {
+          position: static;
           display: inline-block;
           margin-top: 0px;
           border-color: $color-white;
           color: $color-white;
+          transform: none;
 
           &:hover {
             background-color: $color-white;
@@ -102,13 +104,13 @@
   }
 
   .navbar {
-    margin-bottom: 98px;
+    margin-bottom: 100px;
     border-top: 5px solid $color-clicable-el;
     top: 100px;
     padding: 30px 0;
 
     .navbar-link {
-      padding: 0 13%;
+      padding: 0 100px;
       line-height: 24px;
     }
   }
@@ -124,16 +126,16 @@
       padding: 0 135px;
 
       .skout-tips-img {
-        width: 247px;
+        width: 250px;
         margin: 20px 0 100px 0;
       }
 
       .accordion-wrapper {
         .accordion-hide {
+          display: flex!important;
           margin: 0;
 
           .accordion-img-wrapper {
-            display: inline-block;
             width: $size-accordion-image-desktop;
             height: $size-accordion-image-desktop;
             margin: 50px;
@@ -145,9 +147,7 @@
           }
 
           .accordion-content {
-            display: inline-block;
-            width: 464px;
-            margin-left: 130px;
+            margin: 0 200px 0 130px;
             vertical-align: top;
 
             .accordion-text {
@@ -157,7 +157,7 @@
             }
 
             .accordion-note-block {
-              padding: 60px 0 0 0;
+              padding: 60px 0 24px 0;
 
               .accordion-note {
                 max-width: 400px;
@@ -384,5 +384,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (min-width: $size-tablet-width){
+  .navbar {
+    max-width: 770px;
   }
 }

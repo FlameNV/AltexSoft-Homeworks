@@ -4,12 +4,9 @@ const menuIcon = document.querySelector("#menu-btn");
 const links = document.getElementById("nav-links");
 
 function openMenu() {
-  if (links.style.display === "block") {
-    links.style.display = "none";
-  } else {
-    links.style.display = "block";
-  }
+  links.classList.toggle("is-open");
   menuIcon.classList.toggle("is-clicked");
+  document.body.classList.toggle("lock-scroll");
 }
 
 window.onscroll = () => {
@@ -60,8 +57,9 @@ for (let i = 0; i < navLinksLi.length; i++) {
 
   if (window.innerWidth < 1440) {
     navLinksLi[i].firstElementChild.addEventListener("click", function () {
-      links.style.display = "none";
+      links.classList.remove("is-open");
       menuIcon.classList.remove("is-clicked");
+      document.body.classList.remove("lock-scroll");
     });
   }
 }
