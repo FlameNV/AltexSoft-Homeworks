@@ -1,0 +1,394 @@
+@import "variables";
+@import "mixins";
+
+@media only screen and (min-width: $size-desktop-width) {
+  .header {
+    .header-title {
+      @include letters-xxl;
+
+      width: 50%;
+      padding: 185px 0;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      padding: 28px 84px 28px 90px;
+
+      .logo {
+        width: $size-logo-desktop;
+      }
+
+      .logo-dark {
+        width: $size-logo-desktop;
+      }
+
+      .nav-links {
+        position: static;
+        display: block;
+        height: auto;
+        background-color: transparent;
+        text-align: right;
+
+        .menu {
+          display: inline-block;
+          padding-top: 0px;
+          color: $color-white;
+
+          &.is-scroll {
+            color: $color-primary-dark;
+
+            .menu-item {
+              .nav-link.active {
+                border-bottom: 1.5px solid $color-primary-dark;
+              }
+
+              .nav-link:hover {
+                border-bottom: 1.5px solid $color-primary-dark;
+                transition: 0.7s;
+              }
+            }
+          }
+
+          .menu-item {
+            display: inline-block;
+            margin-bottom: 0px;
+
+            .nav-link {
+              margin-right: 50px;
+              padding-bottom: 7px;
+              color: inherit;
+
+              &.active {
+                border-bottom: 1.5px solid $color-white;
+              }
+
+              &:hover {
+                border-bottom: 1.5px solid $color-white;
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+
+        .menu-get-skout-btn,
+        .menu-login-btn {
+          position: static;
+          display: inline-block;
+          margin-top: 0px;
+          border-color: $color-white;
+          color: $color-white;
+          transform: none;
+
+          &:hover {
+            background-color: $color-white;
+            color: $color-clicable-el;
+          }
+
+          &.is-scroll {
+            color: $color-primary-dark;
+            border-color: $color-primary-dark;
+          }
+        }
+
+        .menu-get-skout-btn {
+          margin-right: 20px;
+        }
+      }
+
+      .menu-btn {
+        .menu-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    margin-bottom: 100px;
+    border-top: 5px solid $color-clicable-el;
+    top: 100px;
+    padding: 30px 0;
+
+    .navbar-link {
+      padding: 0 100px;
+      line-height: 24px;
+    }
+  }
+
+  .main-section {
+    .section-delimiter {
+      &.margin {
+        margin-top: 160px;
+      }
+    }
+
+    .skout-tips {
+      padding: 0 135px;
+
+      .skout-tips-img {
+        width: 250px;
+        margin: 20px 0 100px 0;
+      }
+
+      .accordion-wrapper {
+        .accordion-hide {
+          display: flex!important;
+          margin: 0;
+
+          .accordion-img-wrapper {
+            width: $size-accordion-image-desktop;
+            height: $size-accordion-image-desktop;
+            margin: 50px;
+
+            .accordion-img {
+              width: $size-accordion-image-desktop;
+              height: $size-accordion-image-desktop;
+            }
+          }
+
+          .accordion-content {
+            margin: 0 200px 0 130px;
+            vertical-align: top;
+
+            .accordion-text {
+              @include letters-m;
+
+              margin-top: 0;
+            }
+
+            .accordion-note-block {
+              padding: 60px 0 24px 0;
+
+              .accordion-note {
+                max-width: 400px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .accordion-btn {
+          @include letters-l;
+
+          &.active {
+            font-size: 42px;
+            line-height: 54px;
+            text-align: start;
+          }
+
+          .accordion-title {
+            max-width: 1000px;
+          }
+
+          .accordion-number {
+            @include letters-xxl;
+
+            width: 64px;
+            padding-right: 90px;
+          }
+
+          .accordion-dot {
+            width: $size-accordion-button-desktop;
+            height: $size-accordion-button-desktop;
+
+            &::before,
+            &::after {
+              width: 18px;
+              height: 2px;
+              top: 15px;
+              right: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .skout-glossary {
+      .skout-glossary-img-wrapper {
+        padding: 0 135px;
+
+        .skout-glossary-img {
+          width: 342px;
+          margin: 20px 0 50px 0;
+        }
+      }
+      .skout-glossary-slider-wrapper {
+        .skout-glossary-slider {
+          display: flex;
+          padding: 60px 0;
+
+          .skout-glossary-slider-content {
+            max-width: 770px;
+
+            .skout-glossary-slider-item {
+              margin-left: 130px;
+
+              .skout-glossary-slider-item-title {
+                margin: 0 0 73px 0;
+                font-size: 90px;
+                line-height: 120px;
+              }
+
+              .skout-glossary-slider-item-text {
+                @include letters-l;
+
+                max-width: 462px;
+                margin-left: 70px;
+                padding-left: 36px;
+              }
+            }
+          }
+
+          .skout-glossary-slider-menu {
+            width: 420px;
+            padding: 60px 0 30px 0;
+            margin: 0;
+
+            .prev,
+            .next {
+              width: 25px;
+              top: 25px;
+            }
+
+            .prev {
+              top: 70px;
+            }
+
+            .skout-glossary-slider-menu-title {
+              padding-left: 150px;
+
+              &.is-active::before {
+                width: 105px;
+                left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .skout-faqs {
+      padding: 0 135px 100px 135px;
+
+      .skout-faqs-more-questions-btn {
+        margin: 50px auto 0 auto;
+      }
+
+      .skout-faqs-img {
+        width: 272px;
+        margin: 20px 0 100px 0;
+      }
+
+      .skout-faqs-accordion {
+        .skout-faqs-accordion-btn {
+          &::before {
+            @include letters-xxl;
+          }
+
+          .skout-faqs-question {
+            @include letters-l;
+
+            margin-left: 100px;
+          }
+        }
+
+        .skout-faqs-answer {
+          .skout-faqs-answer-wrapper {
+            &::before {
+              @include letters-xxl;
+            }
+
+            .skout-faqs-answer-text {
+              @include letters-m;
+
+              max-width: 670px;
+              margin: 35px 0 0 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-wrapper {
+      .footer-info-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 78px 135px 0 135px;
+
+        .footer-nav-block {
+          max-width: 200px;
+          padding: 0;
+
+          .links {
+            & ul li {
+              margin-bottom: 30px;
+            }
+          }
+        }
+
+        .footer-address-block-wrapper {
+          width: 900px;
+
+          .footer-address-block {
+            display: flex;
+            align-items: center;
+            padding: 10px 0 50px 0;
+
+            .footer-address-title {
+              @include letters-l;
+
+              width: 320px;
+              margin-right: 20px;
+            }
+
+            .footer-address-info {
+              max-width: 270px;
+              margin-left: 30px;
+              font-size: $font-s;
+            }
+
+            .footer-map-link {
+              @include letters-m;
+
+              display: block;
+              margin: 0 0 0 auto;
+            }
+          }
+        }
+      }
+
+      .footer-delimiter {
+        margin: 0;
+      }
+
+      .footer-down-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 135px;
+
+        .footer-social-block {
+          .icon {
+            margin-right: 53px;
+          }
+        }
+
+        .footer-logo-wrapper {
+          margin: 0;
+
+          .footer-logo {
+            width: 170px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $size-tablet-width){
+  .navbar {
+    max-width: 770px;
+  }
+}
