@@ -322,7 +322,7 @@
           padding: 0;
 
           .links {
-            .link {
+            & ul li {
               margin-bottom: 30px;
             }
           }
@@ -340,6 +340,7 @@
               @include letters-l;
 
               width: 320px;
+              margin-right: 20px;
             }
 
             .footer-address-info {
@@ -353,10 +354,6 @@
 
               display: block;
               margin: 0 0 0 auto;
-            }
-
-            .call {
-              margin-left: 20px;
             }
           }
         }

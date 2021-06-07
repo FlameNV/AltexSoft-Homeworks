@@ -81,7 +81,7 @@
         height: 2px;
         right: 0;
         background-color: $color-white;
-        transition: .4s;
+        transition: 0.4s;
 
         &:first-child {
           top: 0;
@@ -645,10 +645,17 @@
           display: flex;
           flex-direction: column;
 
+          & ul {
+            list-style: none;
+
+            & li {
+              margin-bottom: 12px;
+            }
+          }
+
           .link {
             @include letters-xs;
 
-            margin-bottom: 12px;
             font-family: $font-family-acme;
             letter-spacing: 2px;
             text-transform: uppercase;
