@@ -1,0 +1,442 @@
+@import "variables";
+@import "mixins";
+
+@media only screen and (min-width: $size-desktop-width) {
+  .header {
+    .header-title {
+      @include letters-xxl;
+
+      padding: 160px 0 120px 0;
+    }
+
+    .header-nav {
+      padding: 28px 84px 28px 90px;
+
+      .logo {
+        width: $size-logo-desktop;
+      }
+
+      .logo-dark {
+        width: $size-logo-desktop;
+      }
+
+      .nav-links {
+        position: static;
+        display: block;
+        height: auto;
+        background-color: transparent;
+        text-align: right;
+
+        .menu {
+          display: inline-block;
+          padding-top: 0px;
+          color: $color-white;
+
+          &.is-scroll {
+            color: $color-primary-dark;
+
+            .menu-item {
+              .nav-link.active {
+                border-bottom: 1.5px solid $color-primary-dark;
+              }
+
+              .nav-link:hover {
+                border-bottom: 1.5px solid $color-primary-dark;
+                transition: 0.7s;
+              }
+            }
+          }
+
+          .menu-item {
+            display: inline-block;
+            margin-bottom: 0px;
+
+            .nav-link {
+              margin-right: 50px;
+              padding-bottom: 7px;
+              color: inherit;
+
+              &.active {
+                border-bottom: 1.5px solid $color-white;
+              }
+
+              &:hover {
+                border-bottom: 1.5px solid $color-white;
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+
+        .menu-get-skout-btn,
+        .menu-login-btn {
+          position: static;
+          display: inline-block;
+          margin-top: 0px;
+          border-color: $color-white;
+          color: $color-white;
+          transform: none;
+
+          &:hover {
+            background-color: $color-white;
+            color: $color-clicable-el;
+          }
+
+          &.is-scroll {
+            color: $color-primary-dark;
+            border-color: $color-primary-dark;
+          }
+        }
+
+        .menu-get-skout-btn {
+          margin-right: 20px;
+        }
+      }
+
+      .menu-btn {
+        .menu-icon {
+          display: none;
+        }
+      }
+    }
+
+    .header-info {
+      display: flex;
+      align-items: center;
+      padding: 0 0 100px 205px;
+
+      .header-info-text {
+        max-width: 670px;
+
+        font-size: $font-m;
+        line-height: 26px;
+      }
+
+      .header-info-btn {
+        margin-left: 130px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .main-section {
+    .what-is-skout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 50px 135px 100px 135px;
+
+      .what-is-skout-img-wrapper {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin: 0;
+        .what-is-skout-img {
+          max-height: 650px;
+        }
+      }
+
+      .what-is-skout-info {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 100px 0 0 100px;
+
+        .what-is-skout-title {
+          @include desktop-title;
+
+          margin-bottom: 40px;
+        }
+      }
+
+      .what-is-skout-btn-block {
+        display: flex;
+        justify-content: space-between;
+        grid-row-start: 3;
+        grid-column-start: 2;
+        margin: 100px 0 100px 100px;
+
+        .learn-more-btn,
+        .explore-products-btn {
+          margin: 0;
+        }
+      }
+    }
+
+    .cybersecurity-section {
+      padding: 0 135px 100px 135px;
+
+      .cybersecurity-title {
+        @include desktop-title;
+
+        margin-bottom: 80px;
+      }
+
+      .cybersecurity-cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .cybersecurity-card {
+          width: 500px;
+          padding: 35px 45px 10px 55px;
+          margin-bottom: 30px;
+
+          .card-info {
+            padding-right: 25px;
+            .card-title {
+              @include letters-l;
+            }
+
+            .card-text {
+              font-size: 13px;
+            }
+          }
+
+          .card-note-icon {
+            bottom: 15px;
+            right: 15px;
+          }
+
+          .card-img-wrapper {
+            margin-top: 20px;
+          }
+
+          .marquee {
+            width: 250px;
+            right: -100px;
+            bottom: 50px;
+          }
+        }
+      }
+
+      .more-tips-btn {
+        margin-top: 50px;
+      }
+    }
+
+    .solve-section {
+      .solve-wrapper {
+        padding: 0 135px 200px 135px;
+
+        .solve-title {
+          @include desktop-title;
+
+          padding: 120px 0 0 0;
+        }
+
+        .solve-slider {
+          .slick-dots {
+            flex-direction: column;
+            width: 24px;
+            left: 100%;
+            transform: none;
+
+            & li:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 24px;
+            }
+          }
+
+          .solve-slider-item {
+            display: flex;
+            flex-direction: row-reverse;
+
+            .solve-slider-item-img {
+              padding-left: 220px;
+              .icon {
+                width: 450px;
+              }
+            }
+
+            .solve-slider-item-info {
+              padding: 80px 0 0 100px;
+
+              .solve-slider-item-btn {
+                margin: 20px 0 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .skout-plans {
+      margin-top: -400px;
+      .skout-plans-wrapper {
+        .skout-plans-title {
+          @include desktop-title;
+
+          margin-bottom: 70px;
+        }
+      }
+    }
+
+    .companies-section {
+      padding: 150px 135px 140px 135px;
+      .companies-slider {
+        .company-slide {
+          display: flex;
+          padding: 0 100px 0 30px;
+
+          .company-slide-content {
+            padding-left: 130px;
+
+            .company-slide-quote {
+              @include letters-l;
+
+              text-align: start;
+            }
+
+            .company-slide-author {
+              text-align: end;
+            }
+          }
+
+          .company-slide-img-wrapper {
+            padding: 0 20px;
+          }
+        }
+
+        .slick-dots {
+          height: 85px;
+
+          & li {
+            width: 120px;
+          }
+        }
+      }
+
+      .companies-slider-dots {
+        .dot-wrapper {
+          max-width: 120px;
+
+          & img {
+            max-width: 120px;
+          }
+        }
+      }
+    }
+
+    .contact-section {
+      padding-bottom: 200px;
+      .contact-section-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .contact-section-info {
+          padding: 130px 135px 0 130px;
+
+          .contact-section-title {
+            @include desktop-title;
+          }
+        }
+
+        .contact-section-img-wrapper {
+          margin: 0;
+
+          & img {
+            width: 705px;
+          }
+        }
+      }
+
+      .contact-usable-block {
+        display: flex;
+        justify-content: space-between;
+        bottom: 70px;
+        padding: 30px 70px;
+        .contact-usable-block-item {
+          width: 360px;
+          .contact-usable-block-title {
+            margin: 0;
+            padding-bottom: 8px;
+          }
+
+          .contact-usable-block-row {
+            .contact-usable-block-text {
+              @include letters-l;
+
+              padding-left: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-wrapper {
+      .footer-info-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 78px 135px 0 135px;
+
+        .footer-nav-block {
+          max-width: 200px;
+          padding: 0;
+
+          .links {
+            & ul li {
+              margin-bottom: 30px;
+            }
+          }
+        }
+
+        .footer-address-block-wrapper {
+          width: 900px;
+
+          .footer-address-block {
+            display: flex;
+            align-items: center;
+            padding: 10px 0 50px 0;
+
+            .footer-address-title {
+              @include letters-l;
+
+              width: 320px;
+              margin-right: 20px;
+            }
+
+            .footer-address-info {
+              max-width: 270px;
+              margin-left: 30px;
+              font-size: $font-s;
+            }
+
+            .footer-map-link {
+              @include letters-m;
+
+              display: block;
+              margin: 0 0 0 auto;
+            }
+          }
+        }
+      }
+
+      .footer-delimiter {
+        margin: 0;
+      }
+
+      .footer-down-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 135px;
+
+        .footer-social-block {
+          .icon {
+            margin-right: 53px;
+          }
+        }
+
+        .footer-logo-wrapper {
+          margin: 0;
+
+          .footer-logo {
+            width: 170px;
+          }
+        }
+      }
+    }
+  }
+}

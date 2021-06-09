@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AltexSoft Lab 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Acme&family=Actor&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <div class="container" id="start">
+      <header class="header">
+        <div class="header-nav" id="navigation">
+          <a href="#start" id="logo">
+            <img src="images/skout-3.png" alt="logo" class="logo" />
+          </a>
+          <a href="#start" id="logo-dark">
+            <img src="./images/skout-2.png" alt="logo dark" class="logo-dark" />
+          </a>
+          <button class="menu-btn" id="menu-btn" onclick="openMenu()">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+
+          <nav id="nav-links" class="nav-links">
+            <ul class="menu" id="menu">
+              <li class="menu-item">
+                <a href="#" class="nav-link active">why skout</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">products</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">partners</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">company</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">tips & tools</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">blog</a>
+              </li>
+            </ul>
+            <button class="menu-get-skout-btn" id="get-skout-btn">
+              get skout
+            </button>
+            <button class="menu-login-btn" id="login-btn">log in</button>
+          </nav>
+        </div>
+        <h1 class="header-title">Find trouble before trouble finds you.</h1>
+        <div class="header-info">
+          <p class="header-info-text">
+            SKOUT is a cybersecurity company that delivers total protection for
+            total peace of mind. Whether you’re an international conglomerate or
+            a mom-and-pop shop we make cybersecurity easy and accessible because
+            we believe security is universal and peace of mind is worth
+            protecting.
+          </p>
+          <button class="header-info-btn">Why SKOUT</button>
+        </div>
+      </header>
+      <main class="main-section">
+        <div class="what-is-skout">
+          <div class="what-is-skout-info">
+            <h2 class="what-is-skout-title">What is SKOUT?</h2>
+            <p class="what-is-skout-text">
+              A cybersecurity platform that offers world-class protection,
+              monitoring everything from emails to endpoints. With a team of
+              security experts from both the public and private sectors, our
+              cloud-native streaming data analytics platform offers total peace
+              of mind to businesses of any size.
+            </p>
+          </div>
+          <div class="what-is-skout-img-wrapper">
+            <img
+              src="./images/what-is-skout.png"
+              alt="what is skout image"
+              class="what-is-skout-img"
+            />
+          </div>
+          <div class="what-is-skout-btn-block">
+            <button class="learn-more-btn">learn more</button>
+            <button class="explore-products-btn">explore products</button>
+          </div>
+        </div>
+        <div class="cybersecurity-section">
+          <h2 class="cybersecurity-title">Cybersecurity Essentials</h2>
+          <div class="cybersecurity-cards-wrapper">
+            <div class="cybersecurity-card">
+              <div class="card-info">
+                <h3 class="card-title">System Patching</h3>
+                <p class="card-text">
+                  There’s nothing hackers love more than a dismissed update
+                  reminder. We keep your team’s computers in shape and
+                  up-to-date.
+                </p>
+              </div>
+              <div class="card-img-wrapper">
+                <svg class="icon">
+                  <use xlink:href="./images/pictures.svg#security-img-1"></use>
+                </svg>
+              </div>
+              <span class="card-note-icon">i</span>
+              <div class="marquee">
+                <p>Based on the 2018 Verizon Data Breach Report</p>
+              </div>
+            </div>
+            <div class="cybersecurity-card">
+              <div class="card-info">
+                <h3 class="card-title">End-to-End Protection</h3>
+                <p class="card-text">
+                  51% of breaches involved malware that infects endpoints. We
+                  cover your bases.
+                </p>
+              </div>
+              <div class="card-img-wrapper">
+                <svg class="icon">
+                  <use xlink:href="./images/pictures.svg#security-img-2"></use>
+                </svg>
+              </div>
+              <span class="card-note-icon">i</span>
+              <div class="marquee">
+                <p>Based on the 2018 Verizon Data Breach Report</p>
+              </div>
+            </div>
+            <div class="cybersecurity-card">
+              <div class="card-info">
+                <h3 class="card-title">Empowering Teams</h3>
+                <p class="card-text">
+                  With 43% of breaches involving social attacks, cybersecurity
+                  is a team sport. We get your employees up to speed.
+                </p>
+              </div>
+              <div class="card-img-wrapper">
+                <svg class="icon">
+                  <use xlink:href="./images/pictures.svg#security-img-3"></use>
+                </svg>
+              </div>
+              <span class="card-note-icon">i</span>
+              <div class="marquee">
+                <p>Based on the 2018 Verizon Data Breach Report</p>
+              </div>
+            </div>
+            <div class="cybersecurity-card">
+              <div class="card-info">
+                <h3 class="card-title">Secure Credentials</h3>
+                <p class="card-text">
+                  81% of attacks involve stolen or weak credentials.
+                </p>
+              </div>
+              <div class="card-img-wrapper">
+                <svg class="icon">
+                  <use xlink:href="./images/pictures.svg#security-img-4"></use>
+                </svg>
+              </div>
+              <span class="card-note-icon">i</span>
+              <div class="marquee">
+                <p>Based on the 2018 Verizon Data Breach Report</p>
+              </div>
+            </div>
+          </div>
+          <button class="more-tips-btn">More Tips</button>
+        </div>
+        <div class="solve-section">
+          <div class="solve-wrapper">
+            <h2 class="solve-title">Problems We Solve</h2>
+            <div class="solve-slider">
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-1"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Threat Intelligence</h6>
+                  <p class="solve-slider-item-text">
+                    Our team is part of a global network of public and private
+                    sector businesses and agencies that share the latest
+                    intelligence on emerging threats, attacks, and alerts. We
+                    never share the names of companies or customers and we are
+                    never in the dark.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-2"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Traffic Blindspots</h6>
+                  <p class="solve-slider-item-text">
+                    We keep a close eye on all the comings and goings on every
+                    network. Monitoring activity from your infrastructure,
+                    desktops, services, endpoints, and other sources, we can
+                    detect openings that could leave you vulnerable to threats.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-3"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Abnormal Activity</h6>
+                  <p class="solve-slider-item-text">
+                    Patterns exist in every network. Our platform synthesizes
+                    every byte of data to detect anomalies that could indicate a
+                    threat. A single outlier in the system can mean the
+                    difference between a simple alert and a system failure.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-4"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">System Error</h6>
+                  <p class="solve-slider-item-text">
+                    Sometimes, an anomaly is just that. An outlier in a larger
+                    pattern that doesn’t indicate a larger attack. It takes a
+                    human to know the difference between danger and random data.
+                    Our team of security professionals is trained to do just
+                    that.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-5"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Missed Connections</h6>
+                  <p class="solve-slider-item-text">
+                    When we find trouble, we don’t just send a simple report. We
+                    send a comprehensive gameplan that outlines the severity of
+                    the threat, all the technical information you need, and the
+                    steps to seal off your vulnerabilities and stop the threat.
+                    Plus, we include a report in plain English that summarizes
+                    the event simply and succinctly
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-6"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Waiting Times</h6>
+                  <p class="solve-slider-item-text">
+                    Our personnel are always available by phone and email to
+                    answer any questions you might have. In the event of a
+                    breach, we will be there to document every bit of data and
+                    assist you with reporting the attack to both internal staff
+                    and any governing agencies that need to be informed.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-7"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Radio Silence</h6>
+                  <p class="solve-slider-item-text">
+                    Some firms might be comfortable with reaching out only when
+                    threats appear, but we believe that cybersecurity is a
+                    full-time job. That’s why we perform quarterly vulnerability
+                    scans to make sure threats don’t slip through the cracks,
+                    providing every client with executive reports that outline
+                    the progress that has been made and where extra resources
+                    are needed.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-8"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Up To Date Solutions</h6>
+                  <p class="solve-slider-item-text">
+                    Every company has different needs. That’s why our executive
+                    reports provide our clients with an opportunity to keep us
+                    up-to-date on new software, systems, and infrastructure that
+                    reshapes the equation. This allows us to provide critical
+                    services that are tailored to your specific business, when
+                    and where you need them most.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+              <div class="solve-slider-item">
+                <div class="solve-slider-item-img">
+                  <svg class="icon">
+                    <use xlink:href="./images/pictures.svg#PSW-9"></use>
+                  </svg>
+                </div>
+                <div class="solve-slider-item-info">
+                  <h6 class="solve-slider-item-title">Test Anxiety</h6>
+                  <p class="solve-slider-item-text">
+                    We believe that you shouldn’t be caught off-guard on game
+                    day. It’s just one reason why we practice penetration
+                    testing. Performing an actual, controlled attack on your
+                    system, we can determine if the measures in place are able
+                    to defend against data breaches in the event of a real
+                    threat.
+                  </p>
+                  <button class="solve-slider-item-btn">Get SKOUT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skout-plans">
+          <div class="skout-plans-wrapper">
+            <h2 class="skout-plans-title">SKOUT Plans</h2>
+            <div class="skout-plans-slider">
+              <div class="skout-plans-card">
+                <h3 class="skout-plans-card-title">Bronze</h3>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Security Training</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Email</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Endpoint</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Monitoring</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Annual Pro Services</p>
+                </div>
+                <button class="skout-plans-card-btn">Request a Quote</button>
+              </div>
+              <div class="skout-plans-card">
+                <h3 class="skout-plans-card-title">Silver</h3>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Security Training</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Email</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Endpoint</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Monitoring</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Annual Pro Services</p>
+                </div>
+                <button class="skout-plans-card-btn">Request a Quote</button>
+              </div>
+              <div class="skout-plans-card">
+                <h3 class="skout-plans-card-title">Gold</h3>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Security Training</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Email</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Endpoint</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Monitoring</p>
+                </div>
+                <div class="skout-plans-card-item blocked">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Annual Pro Services</p>
+                </div>
+                <button class="skout-plans-card-btn">Request a Quote</button>
+              </div>
+              <div class="skout-plans-card">
+                <h3 class="skout-plans-card-title">Plus</h3>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Security Training</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Email</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Endpoint</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Monitoring</p>
+                </div>
+                <div class="skout-plans-card-item">
+                  <span class="skout-plans-card-checked"></span>
+                  <p class="skout-plans-card-item-name">Annual Pro Services</p>
+                </div>
+                <button class="skout-plans-card-btn">Request a Quote</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="companies-section">
+          <div class="companies-slider">
+            <div class="company-slide">
+              <div class="company-slide-img-wrapper">
+                <img
+                  src="./images/tusk.png"
+                  alt="tusk ventures"
+                  class="company-slide-img"
+                />
+              </div>
+              <div class="company-slide-content">
+                <p class="company-slide-quote">
+                  “Skout helped us bring our security and operations forward
+                  dramatically by being so responsive and detail-oriented. The
+                  whole team is really great to work with.”
+                </p>
+                <p class="company-slide-author">— Yoni Rechtman</p>
+              </div>
+            </div>
+            <div class="company-slide">
+              <div class="company-slide-img-wrapper">
+                <img
+                  src="./images/lmstech.png"
+                  alt="lms tech"
+                  class="company-slide-img"
+                />
+              </div>
+              <div class="company-slide-content">
+                <p class="company-slide-quote">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis ratione nesciunt eum, id omnis excepturi quaerat a
+                  illum, officiis necessitatibus, eligendi doloremque? Cum magni
+                  reiciendis sit veritatis qui alias et!
+                </p>
+                <p class="company-slide-author">— Yoni Rechtman</p>
+              </div>
+            </div>
+            <div class="company-slide">
+              <div class="company-slide-img-wrapper">
+                <img
+                  src="./images/calor.png"
+                  alt="calor"
+                  class="company-slide-img"
+                />
+              </div>
+              <div class="company-slide-content">
+                <p class="company-slide-quote">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                  alias, nemo fuga unde ipsam commodi voluptate cumque!
+                  Reiciendis cum quaerat odio suscipit, velit facilis, maxime
+                  deleniti hic quod alias ad.
+                </p>
+                <p class="company-slide-author">— Yoni Rechtman</p>
+              </div>
+            </div>
+            <div class="company-slide">
+              <div class="company-slide-img-wrapper">
+                <img
+                  src="./images/vayner.png"
+                  alt="vayner media"
+                  class="company-slide-img"
+                />
+              </div>
+              <div class="company-slide-content">
+                <p class="company-slide-quote">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Odio, nulla optio maxime fugiat quas corrupti explicabo. Ab,
+                  id atque facere quos harum rerum placeat nobis, architecto hic
+                  at repellendus voluptatum!
+                </p>
+                <p class="company-slide-author">— Yoni Rechtman</p>
+              </div>
+            </div>
+            <div class="company-slide">
+              <div class="company-slide-img-wrapper">
+                <img
+                  src="./images/baron.png"
+                  alt="baron"
+                  class="company-slide-img"
+                />
+              </div>
+              <div class="company-slide-content">
+                <p class="company-slide-quote">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                  perferendis ratione officiis excepturi nesciunt rerum deserunt
+                  cumque similique, omnis obcaecati aut placeat blanditiis
+                  labore eaque possimus molestias dicta quisquam beatae?
+                </p>
+                <p class="company-slide-author">— Yoni Rechtman</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav companies-slider-dots">
+            <div class="dot-wrapper">
+              <img src="./images/tusk.png" alt="tusk" />
+            </div>
+            <div class="dot-wrapper">
+              <img src="./images/lmstech.png" alt="lms tech" />
+            </div>
+            <div class="dot-wrapper">
+              <img src="./images/calor.png" alt="calor" />
+            </div>
+            <div class="dot-wrapper">
+              <img src="./images/vayner.png" alt="vayner" />
+            </div>
+            <div class="dot-wrapper">
+              <img src="./images/baron.png" alt="baron" />
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="contact-section-wrapper">
+            <div class="contact-section-info">
+              <h2 class="contact-section-title">
+                Still have questions? Reach out today.
+              </h2>
+              <p class="contact-section-text">
+                Whether you’re a potential management service provider or a
+                business owner looking for a little extra peace of mind, our
+                representatives are standing by to answer any questions and walk
+                you through the benefits of partnering with us.
+              </p>
+            </div>
+            <div class="contact-section-img-wrapper">
+              <img src="./images/contact-image.jpg" alt="contact image" />
+            </div>
+          </div>
+          <div class="contact-usable-block">
+            <div class="contact-usable-block-item">
+              <h6 class="contact-usable-block-title">Ready to learn more?</h6>
+              <div class="contact-usable-block-row">
+                <p class="contact-usable-block-text">Get in Touch</p>
+                <button class="contact-usable-block-btn">
+                  <svg class="icon">
+                    <use xlink:href="./images/icons.svg#arrow-next"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="contact-usable-block-item">
+              <h6 class="contact-usable-block-title">Are you a MSP?</h6>
+              <div class="contact-usable-block-row">
+                <p class="contact-usable-block-text">Become a Partner</p>
+                <button class="contact-usable-block-btn">
+                  <svg class="icon">
+                    <use xlink:href="./images/icons.svg#arrow-next"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-info-block">
+            <div class="footer-nav-block">
+              <div class="links">
+                <ul>
+                  <li><a href="" class="link">blog</a></li>
+                  <li><a href="" class="link">company</a></li>
+                  <li><a href="" class="link">terms & conditions</a></li>
+                  <li><a href="" class="link">privacy policy</a></li>
+                  <li><a href="" class="link">careers</a></li>
+                </ul>
+              </div>
+              <p class="call-the-soc">call the soc</p>
+              <a href="tel:+1-855-838-4500" class="phone-number">
+                +1-855-838-4500
+              </a>
+            </div>
+            <div class="footer-address-block-wrapper">
+              <div class="footer-address-block">
+                <p class="footer-address-title">New York</p>
+                <a href="tel:+1 631-203-6600" class="phone-number">
+                  +1 631-203-6600
+                </a>
+                <p class="footer-address-info">
+                  423 W 55th St. 7th Floor<br />
+                  New York, NY, 10019
+                </p>
+                <a href="" class="footer-map-link">View Map</a>
+              </div>
+              <div class="footer-address-block">
+                <p class="footer-address-title">Corporate Headquarters</p>
+                <a href="tel:+1 631-203-6600" class="phone-number">
+                  +1 631-203-6600
+                </a>
+                <p class="footer-address-info">
+                  270 S. Service Road, Suite 55<br />
+                  Melville, NY, 11747
+                </p>
+                <a href="" class="footer-map-link">View Map</a>
+              </div>
+              <div class="footer-address-block">
+                <p class="footer-address-title">EMEA</p>
+                <a href="tel:+353-1-6600800" class="phone-number">
+                  +353-1-6600800
+                </a>
+                <p class="footer-address-info">
+                  IDA Business and Technology<br />
+                  Park, Mountrath Road, Unit 2<br />
+                  Portlaoise, Ireland
+                </p>
+                <a href="" class="footer-map-link">View Map</a>
+              </div>
+            </div>
+          </div>
+          <span class="footer-delimiter"></span>
+          <div class="footer-down-side">
+            <div class="footer-social-block">
+              <a href="#">
+                <svg class="icon twitter">
+                  <use xlink:href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="icon facebook">
+                  <use xlink:href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="icon youtube">
+                  <use xlink:href="./images/icons.svg#youtube"></use>
+                </svg>
+              </a>
+              <a href="">
+                <svg class="icon linkedin">
+                  <use xlink:href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-logo-wrapper">
+              <a href="#start">
+                <img
+                  src="./images/skout-1.png"
+                  alt="skout cybersecurity"
+                  class="footer-logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/marquee.js"></script>
+  </body>
+</html>
