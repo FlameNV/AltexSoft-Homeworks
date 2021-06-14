@@ -2,41 +2,37 @@
 
 @mixin letters-xxs {
   font-size: $font-xxs;
-  line-height: 20px;
-  font-family: $font-family-acme;
+  line-height: $line-height-s;
 }
 
 @mixin letters-xs {
   font-size: $font-xxs;
-  line-height: 24px;
+  line-height: 2;
 }
 
 @mixin letters-s {
   font-size: $font-xs;
-  line-height: 24px;
-  font-family: $font-family-aclonica;
+  line-height: $line-height-m;
 }
 
 @mixin letters-m {
   font-size: $font-s;
-  line-height: 24px;
-  font-family: $font-family-aclonica;
+  line-height: 1.5;
 }
 
 @mixin letters-l {
   font-size: $font-m;
-  line-height: 36px;
+  line-height: 1.5;
 }
 
 @mixin letters-xl {
   font-size: $font-l;
-  line-height: 48px;
-  font-family: $font-family-actor;
+  line-height: 1.2;
 }
 
 @mixin letters-xxl {
   font-size: $font-xl;
-  line-height: 130px;
+  line-height: $line-height-l;
 }
 
 @mixin desktop-title {

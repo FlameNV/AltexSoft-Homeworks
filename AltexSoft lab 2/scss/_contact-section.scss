@@ -1,0 +1,132 @@
+.contact-section {
+  position: relative;
+  max-width: $size-desktop-width;
+  margin: 0 auto 30px auto;
+  padding-bottom: 150px;
+
+  .contact-wrapper {
+    .contact-info {
+      padding: 0 20px;
+
+      .section-title {
+        text-align: start;
+      }
+
+      .contact-text {
+        @include letters-m;
+
+        margin: 30px 0;
+      }
+    }
+
+    .contact-img-wrapper {
+      max-width: 705px;
+      height: auto;
+      margin: 0 auto;
+
+      & img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .more-info {
+    position: absolute;
+    min-width: $size-mobile-content-width;
+    max-width: 1030px;
+    width: 85%;
+    left: 50%;
+    bottom: -20px;
+    padding: 0 20px;
+    border-radius: 5px;
+    background: linear-gradient(36deg, #03e79a 0%, #13c3e5);
+    transform: translateX(-50%);
+
+    .info-item {
+      .info-title {
+        @include letters-xs;
+
+        margin-top: 20px;
+        border-bottom: 2px solid $color-white;
+        font-family: $font-family-acme;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-white;
+        font-weight: normal;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .info-text {
+          @include letters-m;
+
+          color: $color-white;
+        }
+
+        .info-btn {
+          border: none;
+          background: transparent;
+
+          &:hover {
+            transform: scale(1.2);
+            transition: 0.7s;
+          }
+
+          .icon {
+            width: $size-arrow-right;
+            height: $size-arrow-right;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $size-desktop-width) {
+  .contact-section {
+    padding-bottom: 200px;
+    .contact-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      .contact-info {
+        padding: 130px 135px 0 130px;
+      }
+
+      .contact-img-wrapper {
+        margin: 0;
+
+        & img {
+          width: 705px;
+        }
+      }
+    }
+
+    .more-info {
+      display: flex;
+      justify-content: space-between;
+      bottom: 70px;
+      padding: 30px 70px;
+      .info-item {
+        width: 360px;
+        .info-title {
+          margin: 0;
+          padding-bottom: 8px;
+        }
+
+        .row {
+          .info-text {
+            @include letters-l;
+
+            padding-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
