@@ -1,0 +1,66 @@
+@import "variables";
+@import "mixins";
+
+@import "header";
+@import "description-section";
+@import "cybersecurity-section";
+@import "solve-section";
+@import "plans-section";
+@import "companies-section";
+@import "contact-section";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-aclonica;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn,
+.btn-outlined {
+  @include letters-xs;
+
+  display: block;
+  border-radius: 20px;
+  font-family: $font-family-acme;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0px 6px 12px rgba(127, 127, 127, 0.3);
+
+  &:hover {
+    box-shadow: $button-animation-shadow;
+    transition: 0.7s;
+  }
+};
+
+.btn {
+  border: none;
+  color: $color-white;
+  background-color: $color-clicable-el;
+};
+
+.btn-outlined {
+  border: 1.5px solid $color-clicable-el;
+  color: $color-clicable-el;
+  background-color: $color-white;
+};
+
+.section-title {
+  @include letters-l;
+
+  @media only screen and (min-width: $size-desktop-width) {
+    @include desktop-title;
+  }
+}

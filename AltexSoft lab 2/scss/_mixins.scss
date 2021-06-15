@@ -1,0 +1,41 @@
+@import "variables";
+
+@mixin letters-xxs {
+  font-size: $font-xxs;
+  line-height: $line-height-s;
+}
+
+@mixin letters-xs {
+  font-size: $font-xxs;
+  line-height: 2;
+}
+
+@mixin letters-s {
+  font-size: $font-xs;
+  line-height: $line-height-m;
+}
+
+@mixin letters-m {
+  font-size: $font-s;
+  line-height: 1.5;
+}
+
+@mixin letters-l {
+  font-size: $font-m;
+  line-height: 1.5;
+}
+
+@mixin letters-xl {
+  font-size: $font-l;
+  line-height: 1.2;
+}
+
+@mixin letters-xxl {
+  font-size: $font-xl;
+  line-height: $line-height-l;
+}
+
+@mixin desktop-title {
+  font-size: 42px;
+  line-height: 54px;
+}

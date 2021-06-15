@@ -1,0 +1,146 @@
+.plans-section {
+  margin-top: -300px;
+  .plans-wrapper {
+    max-width: $size-desktop-width;
+    margin: 0 auto;
+    .section-title {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .plans-slider {
+      .plans-card {
+        width: 300px;
+        max-width: 330px;
+        padding: 0 40px;
+        margin: 0 10px;
+        border-radius: 5px;
+        background-color: $color-white;
+        box-shadow: 0px 12px 24px #e5e5e5;
+
+        .card-title {
+          max-width: 220px;
+          margin: 42px 0;
+          font-size: 18px;
+          line-height: 24px;
+          font-family: $font-family-acme;
+          text-transform: uppercase;
+          letter-spacing: 2.25px;
+          font-weight: normal;
+          text-align: center;
+          color: $color-clicable-el;
+        }
+
+        .card-item {
+          display: flex;
+          border-top: 2px solid #f2f2f2;
+
+          .item-icon {
+            width: $size-card-icon-checked;
+            height: $size-card-icon-checked;
+            border: 1.5px solid $color-clicable-el;
+            border-radius: 50%;
+            margin: 9px 20px 0 0;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 7px;
+              height: 15px;
+              margin: 4px auto 0 auto;
+              border: solid $color-clicable-el;
+              border-width: 0 1.5px 1.5px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+          .item-name {
+            max-width: 160px;
+            padding: 10px 0 26px 0;
+            font-size: 13px;
+            line-height: 24px;
+            font-family: $font-family-aclonica;
+            color: $color-primary-dark;
+          }
+
+          &.blocked {
+            .item-icon {
+              border-color: $color-accordion-item;
+
+              &::after {
+                content: "";
+                width: 18px;
+                height: 2px;
+                margin-top: 15px;
+                border: none;
+                background-color: $color-accordion-item;
+                transform: rotate(0);
+              }
+            }
+
+            .item-name {
+              color: $color-accordion-item;
+            }
+          }
+        }
+
+        .card-btn {
+          width: 100%;
+          margin: 25px auto 40px auto;
+          padding: 6.5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $size-desktop-width) {
+  .plans-section {
+    margin-top: -400px;
+    .plans-wrapper {
+      .plans-slider {
+        .plans-card {
+          &:hover {
+            background: linear-gradient(125deg, #18a0fb 47%, #00ee7b 88%);
+
+            .card-title {
+              color: $color-white;
+            }
+
+            .card-item {
+              .item-icon {
+                border-color: $color-white;
+
+                &::after {
+                  border-color: $color-white;
+                }
+              }
+
+              .item-name {
+                color: $color-white;
+              }
+
+              &.blocked {
+                .item-icon {
+                  border-color: $color-accordion-item;
+
+                  &::after {
+                    border-color: $color-accordion-item;
+                  }
+                }
+
+                .item-name {
+                  color: $color-accordion-item;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .section-title {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}

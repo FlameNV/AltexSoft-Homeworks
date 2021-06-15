@@ -1,0 +1,341 @@
+.header {
+  background: linear-gradient(45deg, #12c1e3 30%, #00f86b);
+
+  &-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px 20px;
+    top: 0;
+    background-color: inherit;
+    z-index: 90;
+
+    &.is-scroll {
+      background-color: $color-white;
+    }
+
+    .logo,
+    .logo-dark {
+      width: $size-logo-mobile;
+    }
+
+    #logo {
+      .logo-dark {
+        display: none;
+      }
+
+      &.is-scroll {
+        .logo {
+          display: none;
+        }
+
+        .logo-dark {
+          display: block;
+        }
+      }
+    }
+
+    .menu-btn {
+      position: relative;
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: transparent;
+      z-index: 99;
+
+      &.is-scroll > span {
+        background-color: $color-primary-dark;
+      }
+
+      &.is-clicked {
+        span {
+          &:first-child {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -80%);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:last-child {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        right: 10px;
+        background-color: $color-white;
+        transition: 0.7s;
+
+        &:first-child {
+          top: 13px;
+        }
+
+        &:nth-child(2) {
+          top: 21px;
+        }
+
+        &:last-child {
+          bottom: 13px;
+        }
+      }
+    }
+
+    .nav-links {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100vh;
+      left: 0;
+      background-color: $color-white;
+      z-index: 98;
+
+      &.is-open {
+        display: block;
+      }
+
+      .menu {
+        padding-top: 40px;
+        text-align: center;
+        list-style: none;
+        color: $color-clicable-el;
+
+        &-item {
+          margin-bottom: 16px;
+
+          .nav-link {
+            @include letters-xs;
+
+            text-decoration: none;
+            font-family: $font-family-acme;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: inherit;
+
+            &.active {
+              border-bottom: 2px solid $color-clicable-el;
+            }
+          }
+        }
+      }
+
+      .menu-get-skout-btn,
+      .menu-login-btn {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        background-color: transparent;
+        transform: translateX(-50%);
+        box-shadow: none;
+
+        &:hover {
+          background-color: $color-clicable-el;
+          color: $color-white;
+        }
+      }
+
+      .menu-get-skout-btn {
+        bottom: 156px;
+        padding: 7px 52px;
+      }
+
+      .menu-login-btn {
+        padding: 7px 20px;
+      }
+    }
+  }
+
+  h1 {
+    display: block;
+    max-width: $size-desktop-width;
+    padding: 68px 20px 0px 20px;
+    margin: 0 auto;
+    font-family: $font-family-actor;
+    color: $color-white;
+    font-size: $font-l;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &-info {
+    max-width: $size-desktop-width;
+    padding: 30px 20px;
+    margin: 0 auto;
+
+    &-text {
+      @include letters-m;
+
+      padding-left: 20px;
+      border-left: 2px solid $color-white;
+      color: $color-white;
+    }
+
+    &-btn {
+      margin: 30px auto 0 auto;
+      padding: 8px 60px;
+      color: $color-clicable-el !important;
+      background-color: $color-white !important;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: $size-laptop-size) {
+  .header {
+    h1 {
+      @include letters-xxl;
+
+      padding-top: 100px;
+    }
+
+    &-nav {
+      padding: 18px 20px;
+
+      .nav-links {
+        position: static;
+        display: block;
+        height: auto;
+        background-color: transparent;
+        text-align: right;
+
+        .menu {
+          display: inline-block;
+          padding-top: 0px;
+          color: $color-white;
+
+          &.is-scroll {
+            color: $color-primary-dark;
+
+            .menu-item {
+              .nav-link.active {
+                border-bottom: 1.5px solid $color-primary-dark;
+              }
+
+              .nav-link:hover {
+                border-bottom: 1.5px solid $color-primary-dark;
+                transition: 0.7s;
+              }
+            }
+          }
+
+          &-item {
+            display: inline-block;
+            margin-bottom: 0px;
+
+            .nav-link {
+              margin-right: 20px;
+              padding-bottom: 7px;
+              color: inherit;
+
+              &.active {
+                border-bottom: 1.5px solid $color-white;
+              }
+
+              &:hover {
+                border-bottom: 1.5px solid $color-white;
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+
+        .menu-get-skout-btn,
+        .menu-login-btn {
+          position: static;
+          display: inline-block;
+          margin-top: 0px;
+          border-color: $color-white;
+          color: $color-white;
+          transform: none;
+
+          &:hover {
+            background-color: $color-white;
+            color: $color-clicable-el;
+          }
+
+          &.is-scroll {
+            color: $color-primary-dark;
+            border-color: $color-primary-dark;
+          }
+        }
+
+        .menu-get-skout-btn {
+          padding: 7px 40px;
+          margin-right: 20px;
+        }
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $size-desktop-width) {
+  .header {
+    h1 {
+      padding: 160px 0 120px 0;
+    }
+
+    &-nav {
+      padding: 28px 84px 28px 90px;
+
+      .logo {
+        width: $size-logo-desktop;
+      }
+
+      .logo-dark {
+        width: $size-logo-desktop;
+      }
+
+      .nav-links {
+        .menu {
+          &-item {
+            .nav-link {
+              margin-right: 50px;
+            }
+          }
+        }
+
+        .menu-get-skout-btn {
+          padding: 7px 52px;
+          margin-right: 20px;
+        }
+
+        .menu-login-btn {
+          padding: 7px 20px;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      padding: 0 0 100px 205px;
+
+      &-text {
+        max-width: 670px;
+
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      &-btn {
+        margin-left: 130px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
